@@ -634,6 +634,10 @@
             <Description IsNull="True" />
           </UnloadedRoom>
           <UnloadedRoom>
+            <Number>300</Number>
+            <Description>Intro-Cut</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
             <Number>301</Number>
             <Description>Intro</Description>
           </UnloadedRoom>
@@ -1081,16 +1085,16 @@
         <Characters>
           <Character>
             <ID>0</ID>
-            <ScriptName>cGirl</ScriptName>
-            <RealName>Yu</RealName>
-            <NormalView>2</NormalView>
-            <SpeechView>3</SpeechView>
-            <IdleView>0</IdleView>
-            <ThinkingView>3</ThinkingView>
+            <ScriptName>cDebra</ScriptName>
+            <RealName>Debra</RealName>
+            <NormalView>1</NormalView>
+            <SpeechView>1</SpeechView>
+            <IdleView>1</IdleView>
+            <ThinkingView>1</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
-            <StartX>230</StartX>
-            <StartY>170</StartY>
+            <StartingRoom>300</StartingRoom>
+            <StartX>167</StartX>
+            <StartY>185</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>5</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -1102,7 +1106,7 @@
             <Clickable>False</Clickable>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
-            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <TurnBeforeWalking>False</TurnBeforeWalking>
             <DiagonalLoops>True</DiagonalLoops>
             <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
             <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
@@ -1591,7 +1595,58 @@
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Characters">
-            <SubFolders />
+            <SubFolders>
+              <SpriteFolder Name="Debra">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="32" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="Tim">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Rev">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Organist">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Receptionist">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Cashier">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Salesman">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="CarBuyer">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Neighbor">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="BarGuy">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Mercury">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+            </SubFolders>
             <Sprites>
               <Sprite Slot="18" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
               <Sprite Slot="19" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
@@ -1607,6 +1662,51 @@
               <Sprite Slot="29" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
               <Sprite Slot="30" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
             </Sprites>
+          </SpriteFolder>
+          <SpriteFolder Name="Backgrounds">
+            <SubFolders>
+              <SpriteFolder Name="Intro">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Church">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Studio">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="RadioStation">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Mercury">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Downtown">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="MovieTheater">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Bar">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Heaven">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+              <SpriteFolder Name="Hell">
+                <SubFolders />
+                <Sprites />
+              </SpriteFolder>
+            </SubFolders>
+            <Sprites />
           </SpriteFolder>
         </SubFolders>
         <Sprites>
@@ -1625,7 +1725,7 @@
         <Views>
           <View>
             <ID>1</ID>
-            <Name>VIEW1</Name>
+            <Name>DebraIdle</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -1633,7 +1733,7 @@
                 <Frames>
                   <ViewFrame>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>32</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
@@ -1646,7 +1746,7 @@
                 <Frames>
                   <ViewFrame>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>32</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
@@ -1659,7 +1759,7 @@
                 <Frames>
                   <ViewFrame>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>32</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
@@ -1950,8 +2050,8 @@
             <SubFolders />
             <AudioClips>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\ElectricNoise.WAV</SourceFileName>
                 <ScriptName>aElectricNoise</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\ElectricNoise.WAV</SourceFileName>
                 <Index>1</Index>
                 <Type>3</Type>
                 <BundlingType>InGameEXE</BundlingType>
@@ -1962,8 +2062,8 @@
                 <FileLastModifiedDate>2012-02-10 13:06:18Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\LostCraftHowl.wav</SourceFileName>
                 <ScriptName>aLostCraftHowl</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\LostCraftHowl.wav</SourceFileName>
                 <Index>2</Index>
                 <Type>3</Type>
                 <BundlingType>InGameEXE</BundlingType>
@@ -1974,8 +2074,8 @@
                 <FileLastModifiedDate>2012-02-10 13:06:18Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\RadioNoise.WAV</SourceFileName>
                 <ScriptName>aRadioNoise</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\RadioNoise.WAV</SourceFileName>
                 <Index>3</Index>
                 <Type>3</Type>
                 <BundlingType>InGameEXE</BundlingType>
@@ -2007,24 +2107,24 @@
     </AudioClips>
     <AudioClipTypes>
       <AudioClipType>
-        <TypeID>1</TypeID>
         <Name xml:space="preserve">Ambient Sound</Name>
+        <TypeID>1</TypeID>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <TypeID>2</TypeID>
         <Name>Music</Name>
+        <TypeID>2</TypeID>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>30</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <TypeID>3</TypeID>
         <Name>Sound</Name>
+        <TypeID>3</TypeID>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
