@@ -865,7 +865,7 @@
                 <Name>bStart</Name>
               </GUIButton>
               <GUIButton>
-                <OnClick>bLoad_OnClick</OnClick>
+                <OnClick>bOptions_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -875,15 +875,15 @@
                 <PushedImage>0</PushedImage>
                 <MouseoverImage>0</MouseoverImage>
                 <Image>0</Image>
-                <Text>LOAD</Text>
+                <Text>OPTIONS</Text>
                 <Height>15</Height>
                 <Locked>False</Locked>
-                <Width>30</Width>
-                <Left>45</Left>
+                <Width>33</Width>
+                <Left>44</Left>
                 <Top>4</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
-                <Name>bLoad</Name>
+                <Name>bOptions</Name>
               </GUIButton>
               <GUIButton>
                 <OnClick>bQuit_OnClick</OnClick>
@@ -906,6 +906,415 @@
                 <ID>2</ID>
                 <Name>bQuit</Name>
               </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>150</Height>
+              <Width>280</Width>
+              <Left>35</Left>
+              <Top>25</Top>
+              <Clickable>True</Clickable>
+              <Visibility>PopupModal</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>33808</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>3</ID>
+              <Name>gSaveGame</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Save game as:</Text>
+                <Height>15</Height>
+                <Locked>False</Locked>
+                <Width>223</Width>
+                <Left>20</Left>
+                <Top>7</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label5</Name>
+              </GUILabel>
+              <GUITextBox>
+                <OnActivate>txtNewSaveName_OnActivate</OnActivate>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <ShowBorder>True</ShowBorder>
+                <Text />
+                <Height>30</Height>
+                <Locked>False</Locked>
+                <Width>181</Width>
+                <Left>7</Left>
+                <Top>19</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>txtNewSaveName</Name>
+              </GUITextBox>
+              <GUIButton>
+                <OnClick>btnSaveGame_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>2</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">You've been Saved!</Text>
+                <Height>30</Height>
+                <Locked>False</Locked>
+                <Width>75</Width>
+                <Left>192</Left>
+                <Top>19</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>btnSaveGame</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>btnCancelSave_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Cancel</Text>
+                <Height>20</Height>
+                <Locked>False</Locked>
+                <Width>60</Width>
+                <Left>208</Left>
+                <Top>101</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>btnCancelSave</Name>
+              </GUIButton>
+              <GUIListBox>
+                <OnSelectionChanged>lstSaveGamesList_OnSelectionCh</OnSelectionChanged>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <ShowBorder>True</ShowBorder>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <SelectedTextColor>7</SelectedTextColor>
+                <SelectedBackgroundColor>16</SelectedBackgroundColor>
+                <Font>0</Font>
+                <Translated>False</Translated>
+                <Height>72</Height>
+                <Locked>False</Locked>
+                <Width>192</Width>
+                <Left>7</Left>
+                <Top>53</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>lstSaveGamesList</Name>
+              </GUIListBox>
+              <GUIButton>
+                <OnClick>btnDeleteSave_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Delete</Text>
+                <Height>20</Height>
+                <Locked>False</Locked>
+                <Width>50</Width>
+                <Left>208</Left>
+                <Top>68</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name>btnDeleteSave</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>175</Height>
+              <Width>275</Width>
+              <Left>35</Left>
+              <Top>25</Top>
+              <Clickable>True</Clickable>
+              <Visibility>PopupModal</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>8</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>33808</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>4</ID>
+              <Name>gRestoreGame</Name>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <Text xml:space="preserve">Please choose the game that you want to load:</Text>
+                <Height>17</Height>
+                <Locked>False</Locked>
+                <Width>199</Width>
+                <Left>20</Left>
+                <Top>6</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Label52</Name>
+              </GUILabel>
+              <GUIButton>
+                <OnClick>btnRestoreGame_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Load</Text>
+                <Height>24</Height>
+                <Locked>False</Locked>
+                <Width>77</Width>
+                <Left>182</Left>
+                <Top>29</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>btnRestoreGame</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>btnCancelRestore_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Cancel</Text>
+                <Height>25</Height>
+                <Locked>False</Locked>
+                <Width>76</Width>
+                <Left>182</Left>
+                <Top>67</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>btnCancelRestore</Name>
+              </GUIButton>
+              <GUIListBox>
+                <OnSelectionChanged />
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <ShowBorder>True</ShowBorder>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <SelectedTextColor>65528</SelectedTextColor>
+                <SelectedBackgroundColor>16</SelectedBackgroundColor>
+                <Font>0</Font>
+                <Translated>False</Translated>
+                <Height>114</Height>
+                <Locked>False</Locked>
+                <Width>153</Width>
+                <Left>20</Left>
+                <Top>29</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>lstRestoreGamesList</Name>
+              </GUIListBox>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick>gControlPanel_OnCli</OnClick>
+              <Height>150</Height>
+              <Width>315</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>PopupModal</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>33808</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>5</ID>
+              <Name>gControlPanel</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick>btnResume_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>15</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>RESUME</Text>
+                <Height>18</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>195</Left>
+                <Top>25</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>btnResume</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>btnSave_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>63</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">SAVE GAME</Text>
+                <Height>18</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>10</Left>
+                <Top>25</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>btnSave</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>btnQuit2_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">QUIT GAME</Text>
+                <Height>18</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>195</Left>
+                <Top>50</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>btnQuit2</Name>
+              </GUIButton>
+              <GUISlider>
+                <OnChange>sldAudio_OnChange</OnChange>
+                <HandleImage>0</HandleImage>
+                <HandleOffset>0</HandleOffset>
+                <BackgroundImage>0</BackgroundImage>
+                <MinValue>0</MinValue>
+                <MaxValue>100</MaxValue>
+                <Value>100</Value>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>10</Left>
+                <Top>100</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name>sldAudio</Name>
+              </GUISlider>
+              <GUIButton>
+                <OnClick>btnLoad_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>63</TextColor>
+                <Font>1</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text xml:space="preserve">LOAD GAME</Text>
+                <Height>18</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>10</Left>
+                <Top>50</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name>btnLoad</Name>
+              </GUIButton>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>15</TextColor>
+                <Font>1</Font>
+                <Text xml:space="preserve">Audio Volume</Text>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>97</Width>
+                <Left>10</Left>
+                <Top>82</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name>Label1</Name>
+              </GUILabel>
+              <GUISlider>
+                <OnChange>sldSpeed_OnChange</OnChange>
+                <HandleImage>0</HandleImage>
+                <HandleOffset>0</HandleOffset>
+                <BackgroundImage>0</BackgroundImage>
+                <MinValue>10</MinValue>
+                <MaxValue>100</MaxValue>
+                <Value>40</Value>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>195</Left>
+                <Top>100</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name>sldSpeed</Name>
+              </GUISlider>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>15</TextColor>
+                <Font>1</Font>
+                <Text xml:space="preserve">Game Speed</Text>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>100</Width>
+                <Left>195</Left>
+                <Top>82</Top>
+                <ZOrder>7</ZOrder>
+                <ID>7</ID>
+                <Name>Label2</Name>
+              </GUILabel>
+              <GUILabel>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>15</TextColor>
+                <Font>1</Font>
+                <Text xml:space="preserve">CONTROL PANEL</Text>
+                <Height>15</Height>
+                <Locked>False</Locked>
+                <Width>195</Width>
+                <Left>57</Left>
+                <Top>4</Top>
+                <ZOrder>8</ZOrder>
+                <ID>8</ID>
+                <Name>Label3</Name>
+              </GUILabel>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -1094,7 +1503,7 @@
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>301</StartingRoom>
+            <StartingRoom>300</StartingRoom>
             <StartX>202</StartX>
             <StartY>194</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2000,6 +2409,18 @@ return
                 <Sprites />
               </SpriteFolder>
             </SubFolders>
+            <Sprites />
+          </SpriteFolder>
+          <SpriteFolder Name="gSaveGameImport">
+            <SubFolders />
+            <Sprites />
+          </SpriteFolder>
+          <SpriteFolder Name="gRestoreGameImport">
+            <SubFolders />
+            <Sprites />
+          </SpriteFolder>
+          <SpriteFolder Name="gControlPanelImport">
+            <SubFolders />
             <Sprites />
           </SpriteFolder>
         </SubFolders>
