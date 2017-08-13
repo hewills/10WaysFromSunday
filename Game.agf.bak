@@ -74,7 +74,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>10WaysfromSunday</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>3</AudioIndexer>
+      <AudioIndexer>11</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
     </Settings>
     <LipSync>
@@ -1087,7 +1087,23 @@
     <PlayerCharacter>0</PlayerCharacter>
     <Dialogs>
       <DialogFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <DialogFolder Name="intro">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>0</ID>
+                <Name>dDialog1</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+]]></Script>
+                <DialogOptions />
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+        </SubFolders>
         <Dialogs />
       </DialogFolder>
     </Dialogs>
@@ -1216,11 +1232,11 @@
     <Fonts>
       <Font>
         <ID>0</ID>
-        <PointSize>9</PointSize>
+        <PointSize>8</PointSize>
         <Name>fntDefault</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
-        <SourceFilename>Font/visitor1.ttf</SourceFilename>
+        <SourceFilename>Font/Minecraftia.ttf</SourceFilename>
       </Font>
       <Font>
         <ID>1</ID>
@@ -2754,7 +2770,121 @@
       <AudioClipFolder Name="Main">
         <SubFolders>
           <AudioClipFolder Name="Music">
-            <SubFolders />
+            <SubFolders>
+              <AudioClipFolder Name="Intro">
+                <SubFolders />
+                <AudioClips>
+                  <AudioClip>
+                    <ScriptName>aAllCreatures</ScriptName>
+                    <SourceFileName>Music/00_intro/AllCreatures_64kb.ogg</SourceFileName>
+                    <Index>8</Index>
+                    <Type>2</Type>
+                    <BundlingType>InSeparateVOX</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-12 19:55:30Z</FileLastModifiedDate>
+                  </AudioClip>
+                  <AudioClip>
+                    <ScriptName>aGodbewithyou</ScriptName>
+                    <SourceFileName>Music/00_intro/god-be-with-you-till-we-meet-again.ogg</SourceFileName>
+                    <Index>9</Index>
+                    <Type>2</Type>
+                    <BundlingType>InSeparateVOX</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-12 19:57:11Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Church Lobby">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Church Sanctuary">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Radio Lobby">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Radio Booth">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Bar">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Heaven">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Hell">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
+                  <DefaultType>2</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+            </SubFolders>
             <AudioClips />
             <AudioClipFolder>
               <DefaultVolume>100</DefaultVolume>
@@ -2765,45 +2895,133 @@
             </AudioClipFolder>
           </AudioClipFolder>
           <AudioClipFolder Name="Sounds">
-            <SubFolders />
-            <AudioClips>
-              <AudioClip>
-                <ScriptName>aElectricNoise</ScriptName>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\ElectricNoise.WAV</SourceFileName>
-                <Index>1</Index>
-                <Type>3</Type>
-                <BundlingType>InGameEXE</BundlingType>
-                <FileType>WAV</FileType>
-                <DefaultVolume>-1</DefaultVolume>
-                <DefaultPriority>Inherit</DefaultPriority>
-                <DefaultRepeat>Inherit</DefaultRepeat>
-                <FileLastModifiedDate>2012-02-10 13:06:18Z</FileLastModifiedDate>
-              </AudioClip>
-              <AudioClip>
-                <ScriptName>aLostCraftHowl</ScriptName>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\LostCraftHowl.wav</SourceFileName>
-                <Index>2</Index>
-                <Type>3</Type>
-                <BundlingType>InGameEXE</BundlingType>
-                <FileType>WAV</FileType>
-                <DefaultVolume>-1</DefaultVolume>
-                <DefaultPriority>Inherit</DefaultPriority>
-                <DefaultRepeat>Inherit</DefaultRepeat>
-                <FileLastModifiedDate>2012-02-10 13:06:18Z</FileLastModifiedDate>
-              </AudioClip>
-              <AudioClip>
-                <ScriptName>aRadioNoise</ScriptName>
-                <SourceFileName xml:space="preserve">C:\Users\Björn 'Ghost' Ludwig\Desktop\Mythaumatology Assets\Assets\RadioNoise.WAV</SourceFileName>
-                <Index>3</Index>
-                <Type>3</Type>
-                <BundlingType>InGameEXE</BundlingType>
-                <FileType>WAV</FileType>
-                <DefaultVolume>-1</DefaultVolume>
-                <DefaultPriority>Inherit</DefaultPriority>
-                <DefaultRepeat>Inherit</DefaultRepeat>
-                <FileLastModifiedDate>1999-02-11 21:58:18Z</FileLastModifiedDate>
-              </AudioClip>
-            </AudioClips>
+            <SubFolders>
+              <AudioClipFolder Name="Intro">
+                <SubFolders />
+                <AudioClips>
+                  <AudioClip>
+                    <ScriptName>aRain</ScriptName>
+                    <SourceFileName>Sound/00_intro/medium_rainstorm-Mike_Koenig-1134528361.ogg</SourceFileName>
+                    <Index>10</Index>
+                    <Type>1</Type>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-12 19:54:30Z</FileLastModifiedDate>
+                  </AudioClip>
+                  <AudioClip>
+                    <ScriptName>aWind</ScriptName>
+                    <SourceFileName>Sound/00_intro/Wind-Mark_DiAngelo-1940285615.ogg</SourceFileName>
+                    <Index>11</Index>
+                    <Type>1</Type>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-12 19:54:43Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
+                <AudioClipFolder>
+                  <DefaultVolume>50</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Intro-Sign">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Radio-front">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Radio-lobby">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Radio-booth">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Mercury-motors">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Bar">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Heaven">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Hell">
+                <SubFolders />
+                <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+            </SubFolders>
+            <AudioClips />
             <AudioClipFolder>
               <DefaultVolume>100</DefaultVolume>
               <DefaultPriority>Inherit</DefaultPriority>
@@ -2836,13 +3054,29 @@
         <Name>Music</Name>
         <TypeID>2</TypeID>
         <MaxChannels>1</MaxChannels>
-        <VolumeReductionWhileSpeechPlaying>30</VolumeReductionWhileSpeechPlaying>
+        <VolumeReductionWhileSpeechPlaying>40</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
         <Name>Sound</Name>
         <TypeID>3</TypeID>
+        <MaxChannels>0</MaxChannels>
+        <VolumeReductionWhileSpeechPlaying>30</VolumeReductionWhileSpeechPlaying>
+        <CrossfadeClips>No</CrossfadeClips>
+        <BackwardsCompatibilityType>False</BackwardsCompatibilityType>
+      </AudioClipType>
+      <AudioClipType>
+        <Name xml:space="preserve">Faint Music</Name>
+        <TypeID>4</TypeID>
+        <MaxChannels>0</MaxChannels>
+        <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
+        <CrossfadeClips>No</CrossfadeClips>
+        <BackwardsCompatibilityType>False</BackwardsCompatibilityType>
+      </AudioClipType>
+      <AudioClipType>
+        <Name xml:space="preserve">Faint Sound</Name>
+        <TypeID>5</TypeID>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
@@ -2871,7 +3105,7 @@
   <Component Name="Scripts" />
   <Component Name="SpeechCenter">
     <SpeechCenter Version="2.0.4.0">
-      <Document Version="2.0.0.0" LastRefresh="2017-08-12T04:27:00.2457934Z">
+      <Document Version="2.0.0.0" LastRefresh="2017-08-13T03:38:10.7151652Z">
         <Settings>
           <CustomFunctions />
           <VoiceActorScripts NewParagraph="PER_FUNCTION">
@@ -2892,64 +3126,135 @@
           <Edit ShowWarning="true" ExitEditModeAfterSave="true" RefreshProjectAfterSave="Any" />
         </Settings>
         <SpeechLines>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="1">
+            <File Status="NOT_READ" DateModified="2017-08-13T09:47:12.6158455Z" Size="9730" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="Meh. Nothing special." Location="GlobalScript.asc" Function="unhandled_event" LineNum="65" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.0" />
+              <ScriptLine Text="" OriginalText="&amp;1 Timothy!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="44" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="2">
+            <File Status="NOT_READ" DateModified="2017-08-13T09:47:41.2877905Z" Size="16709" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="I can't do anything with it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="69" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.1" />
+              <ScriptLine Text="" OriginalText="&amp;2 Timothy, where are you?!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="45" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="3">
+            <File Status="NOT_READ" DateModified="2017-08-13T09:48:09.6761717Z" Size="12182" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="That won't do a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="73" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.2" />
+              <ScriptLine Text="" OriginalText="&amp;3 I can't see you!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="55" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="4">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:34:37.1244128Z" Size="10199" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="Looks like a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="80" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.0" />
+              <ScriptLine Text="" OriginalText="&amp;4 HELLO?!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="56" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="5">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="I don't want it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="84" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.1" />
+              <ScriptLine Text="" OriginalText="&amp;5 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="57" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;5 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="59" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="6">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:35:08.9977572Z" Size="18612" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="That's a silly thing to do." Location="GlobalScript.asc" Function="unhandled_event" LineNum="88" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.2" />
+              <ScriptLine Text="" OriginalText="&amp;6 TIMOTHY!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="58" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0" FileNum="7">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:36:20.1442087Z" Size="15216" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="Another one of God's children." Location="GlobalScript.asc" Function="unhandled_event" LineNum="95" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.0" />
+              <ScriptLine Text="" OriginalText="&amp;7 TIM...!!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="60" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="1" FileNum="1">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:36:46.3434022Z" Size="11066" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="I don't have anything to say." Location="GlobalScript.asc" Function="unhandled_event" LineNum="99" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.1" />
+              <ScriptLine Text="" OriginalText="&amp;1 Hello?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="38" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="1" FileNum="2">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="I don't think I should give that away." Location="GlobalScript.asc" Function="unhandled_event" LineNum="103" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.2" />
+              <ScriptLine Text="" OriginalText="&amp;2 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="39" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="1" FileNum="3">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:37:07.943718Z" Size="9227" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="Just stuff in my pocket." Location="GlobalScript.asc" Function="unhandled_event" LineNum="110" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.0" />
+              <ScriptLine Text="" OriginalText="&amp;3 Debra?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="40" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="1" FileNum="4">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:37:33.8238562Z" Size="17793" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="Um, no?" Location="GlobalScript.asc" Function="unhandled_event" LineNum="114" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.1" />
+              <ScriptLine Text="" OriginalText="&amp;4 What is this place?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="50" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="1" FileNum="5">
+            <File Status="NOT_READ" DateModified="2017-08-13T10:37:56.2531495Z" Size="14096" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="That's ridiculous." Location="GlobalScript.asc" Function="unhandled_event" LineNum="118" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.2" />
+              <ScriptLine Text="" OriginalText="&amp;5 Where am I?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="51" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="1">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;1 Meh. Nothing special." Location="GlobalScript.asc" Function="unhandled_event" LineNum="65" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="2">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;2 I can't do anything with it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="69" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;3 That won't do a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="73" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;4 Looks like a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="80" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;5 I don't want it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="84" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;6 That's a silly thing to do." Location="GlobalScript.asc" Function="unhandled_event" LineNum="88" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="7">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;7 Another one of God's children." Location="GlobalScript.asc" Function="unhandled_event" LineNum="95" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;8 I don't have anything to say." Location="GlobalScript.asc" Function="unhandled_event" LineNum="99" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="9">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;9 I don't think I should give that away." Location="GlobalScript.asc" Function="unhandled_event" LineNum="103" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;10 Just stuff in my pocket." Location="GlobalScript.asc" Function="unhandled_event" LineNum="110" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="11">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;11 Um, no?" Location="GlobalScript.asc" Function="unhandled_event" LineNum="114" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000" FileNum="12">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&amp;12 That's ridiculous." Location="GlobalScript.asc" Function="unhandled_event" LineNum="118" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.2" />
             </ScriptLines>
           </Speech>
         </SpeechLines>
@@ -2961,7 +3266,18 @@
   <Component Name="Rooms" />
   <Component Name="Translations" />
   <Component Name="MusicAndSpeech">
-    <SpeechVoxFiles />
+    <SpeechVoxFiles>
+      <File Name="speech\debr1.ogg" FileTime="2017-08-13 02:47:12Z" />
+      <File Name="speech\debr2.ogg" FileTime="2017-08-13 02:47:41Z" />
+      <File Name="speech\debr3.ogg" FileTime="2017-08-13 02:48:09Z" />
+      <File Name="speech\debr4.ogg" FileTime="2017-08-13 03:34:37Z" />
+      <File Name="speech\debr6.ogg" FileTime="2017-08-13 03:35:08Z" />
+      <File Name="speech\debr7.ogg" FileTime="2017-08-13 03:36:20Z" />
+      <File Name="speech\timo1.ogg" FileTime="2017-08-13 03:36:46Z" />
+      <File Name="speech\timo3.ogg" FileTime="2017-08-13 03:37:07Z" />
+      <File Name="speech\timo4.ogg" FileTime="2017-08-13 03:37:33Z" />
+      <File Name="speech\timo5.ogg" FileTime="2017-08-13 03:37:56Z" />
+    </SpeechVoxFiles>
     <PamFiles />
   </Component>
   <Component Name="SourceControl">
