@@ -1498,12 +1498,12 @@
             <ID>0</ID>
             <ScriptName>cDebra</ScriptName>
             <RealName>Debra</RealName>
-            <NormalView>4</NormalView>
+            <NormalView>8</NormalView>
             <SpeechView>5</SpeechView>
-            <IdleView>0</IdleView>
+            <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>300</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <StartX>202</StartX>
             <StartY>194</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2244,11 +2244,101 @@ return
                     </SubFolders>
                     <Sprites />
                   </SpriteFolder>
+                  <SpriteFolder Name="talk">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="63" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="64" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="65" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="66" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="67" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_4.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="68" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_5.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="69" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_talk_6.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="blink">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="70" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Debra_blink.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
                 </SubFolders>
                 <Sprites>
                   <Sprite Slot="32" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                     <Source>
                       <FileName>Images/00_intro/sprites/Debra.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="13" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="14" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="15" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="16" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_4.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="17" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_5.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="60" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_6.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="61" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_7.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="62" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/00_intro/sprites/Debra_walk_Animation 1_8.png</FileName>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -3419,46 +3509,64 @@ return
                     <Delay>0</Delay>
                     <Sound>0</Sound>
                   </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>70</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
                 </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <ID>0</ID>
-                    <Image>32</Image>
-                    <Flipped>False</Flipped>
-                    <Delay>0</Delay>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
               <Loop>
                 <ID>2</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <ID>0</ID>
-                    <Image>32</Image>
-                    <Flipped>False</Flipped>
-                    <Delay>0</Delay>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
               <Loop>
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <ID>0</ID>
-                    <Image>32</Image>
-                    <Flipped>False</Flipped>
-                    <Delay>0</Delay>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
             </Loops>
           </View>
@@ -3544,7 +3652,63 @@ return
                   <ViewFrame>
                     <ID>0</ID>
                     <Image>32</Image>
-                    <Flipped>False</Flipped>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>13</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>14</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>15</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>16</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>17</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>60</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>7</ID>
+                    <Image>61</Image>
+                    <Flipped>True</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>8</ID>
+                    <Image>62</Image>
+                    <Flipped>True</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
                   </ViewFrame>
@@ -3557,6 +3721,62 @@ return
                   <ViewFrame>
                     <ID>0</ID>
                     <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>13</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>14</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>15</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>16</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>17</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>60</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>7</ID>
+                    <Image>61</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>8</ID>
+                    <Image>62</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
@@ -3646,8 +3866,8 @@ return
                 <SubFolders />
                 <AudioClips>
                   <AudioClip>
-                    <ScriptName>aAllCreatures</ScriptName>
                     <SourceFileName>Music/00_intro/AllCreatures_64kb.ogg</SourceFileName>
+                    <ScriptName>aAllCreatures</ScriptName>
                     <Index>8</Index>
                     <Type>2</Type>
                     <BundlingType>InSeparateVOX</BundlingType>
@@ -3658,8 +3878,8 @@ return
                     <FileLastModifiedDate>2017-08-12 19:55:30Z</FileLastModifiedDate>
                   </AudioClip>
                   <AudioClip>
-                    <ScriptName>aGodbewithyou</ScriptName>
                     <SourceFileName>Music/00_intro/god-be-with-you-till-we-meet-again.ogg</SourceFileName>
+                    <ScriptName>aGodbewithyou</ScriptName>
                     <Index>12</Index>
                     <Type>2</Type>
                     <BundlingType>InSeparateVOX</BundlingType>
@@ -3771,8 +3991,8 @@ return
                 <SubFolders />
                 <AudioClips>
                   <AudioClip>
-                    <ScriptName>aRain</ScriptName>
                     <SourceFileName>Sound/00_intro/medium_rainstorm-Mike_Koenig-1134528361.ogg</SourceFileName>
+                    <ScriptName>aRain</ScriptName>
                     <Index>10</Index>
                     <Type>1</Type>
                     <BundlingType>InGameEXE</BundlingType>
@@ -3783,8 +4003,8 @@ return
                     <FileLastModifiedDate>2017-08-12 19:54:30Z</FileLastModifiedDate>
                   </AudioClip>
                   <AudioClip>
-                    <ScriptName>aWind</ScriptName>
                     <SourceFileName>Sound/00_intro/Wind-Mark_DiAngelo-1940285615.ogg</SourceFileName>
+                    <ScriptName>aWind</ScriptName>
                     <Index>11</Index>
                     <Type>1</Type>
                     <BundlingType>InGameEXE</BundlingType>
@@ -3914,40 +4134,40 @@ return
     </AudioClips>
     <AudioClipTypes>
       <AudioClipType>
-        <Name xml:space="preserve">Ambient Sound</Name>
         <TypeID>1</TypeID>
+        <Name xml:space="preserve">Ambient Sound</Name>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <Name>Music</Name>
         <TypeID>2</TypeID>
+        <Name>Music</Name>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>40</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>True</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <Name>Sound</Name>
         <TypeID>3</TypeID>
+        <Name>Sound</Name>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>30</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>False</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <Name xml:space="preserve">Faint Music</Name>
         <TypeID>4</TypeID>
+        <Name xml:space="preserve">Faint Music</Name>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>False</BackwardsCompatibilityType>
       </AudioClipType>
       <AudioClipType>
-        <Name xml:space="preserve">Faint Sound</Name>
         <TypeID>5</TypeID>
+        <Name xml:space="preserve">Faint Sound</Name>
         <MaxChannels>0</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
