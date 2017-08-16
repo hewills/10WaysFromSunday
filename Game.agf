@@ -3646,8 +3646,8 @@ return
                 <SubFolders />
                 <AudioClips>
                   <AudioClip>
-                    <ScriptName>aAllCreatures</ScriptName>
                     <SourceFileName>Music/00_intro/AllCreatures_64kb.ogg</SourceFileName>
+                    <ScriptName>aAllCreatures</ScriptName>
                     <Index>8</Index>
                     <Type>2</Type>
                     <BundlingType>InSeparateVOX</BundlingType>
@@ -3914,8 +3914,8 @@ return
     </AudioClips>
     <AudioClipTypes>
       <AudioClipType>
-        <Name xml:space="preserve">Ambient Sound</Name>
         <TypeID>1</TypeID>
+        <Name xml:space="preserve">Ambient Sound</Name>
         <MaxChannels>1</MaxChannels>
         <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
