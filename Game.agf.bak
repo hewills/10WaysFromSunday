@@ -1503,7 +1503,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>300</StartingRoom>
             <StartX>202</StartX>
             <StartY>194</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2290,6 +2290,76 @@ return
                       <Sprite Slot="70" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                         <Source>
                           <FileName>Images/00_intro/sprites/Debra_blink.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Forward">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="71" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="72" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="73" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="74" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_4.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="75" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_5.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="76" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_6.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="77" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Forward/Debra_forward_Animation 1_7.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Backward">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="78" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Backward/Debra_back_Animation 1_0.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="79" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Backward/Debra_back_Animation 1_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="80" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Backward/Debra_back_Animation 1_2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="81" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Backward/Debra_back_Animation 1_3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="82" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/00_intro/sprites/Backward/Debra_back_Animation 1_4.png</FileName>
                         </Source>
                       </Sprite>
                     </Sprites>
@@ -3556,17 +3626,167 @@ return
               <Loop>
                 <ID>1</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>70</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>2</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>70</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>70</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>32</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>
@@ -3643,6 +3863,55 @@ return
                     <Delay>0</Delay>
                     <Sound>0</Sound>
                   </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>71</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>72</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>73</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>74</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>5</ID>
+                    <Image>75</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>6</ID>
+                    <Image>76</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>7</ID>
+                    <Image>77</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
                 </Frames>
               </Loop>
               <Loop>
@@ -3789,7 +4058,35 @@ return
                 <Frames>
                   <ViewFrame>
                     <ID>0</ID>
-                    <Image>32</Image>
+                    <Image>78</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>79</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>80</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>81</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>4</ID>
+                    <Image>82</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
