@@ -720,7 +720,7 @@
                 <Locked>False</Locked>
                 <Width>300</Width>
                 <Left>10</Left>
-                <Top>1</Top>
+                <Top>0</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>lblActionText</Name>
@@ -730,7 +730,7 @@
           <GUIMain>
             <NormalGUI>
               <OnClick>gInventoryBar_OnCli</OnClick>
-              <Height>26</Height>
+              <Height>25</Height>
               <Width>320</Width>
               <Left>0</Left>
               <Top>0</Top>
@@ -750,7 +750,7 @@
                 <ItemWidth>25</ItemWidth>
                 <ItemHeight>20</ItemHeight>
                 <CharacterID>-1</CharacterID>
-                <Height>20</Height>
+                <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>250</Width>
                 <Left>14</Left>
@@ -771,7 +771,7 @@
                 <MouseoverImage>52</MouseoverImage>
                 <Image>51</Image>
                 <Text xml:space="preserve">New Button</Text>
-                <Height>20</Height>
+                <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>10</Width>
                 <Left>2</Left>
@@ -792,7 +792,7 @@
                 <MouseoverImage>55</MouseoverImage>
                 <Image>54</Image>
                 <Text xml:space="preserve">New Button</Text>
-                <Height>20</Height>
+                <Height>19</Height>
                 <Locked>True</Locked>
                 <Width>10</Width>
                 <Left>266</Left>
@@ -817,7 +817,7 @@
                 <Locked>True</Locked>
                 <Width>35</Width>
                 <Left>281</Left>
-                <Top>4</Top>
+                <Top>3</Top>
                 <ZOrder>3</ZOrder>
                 <ID>3</ID>
                 <Name>btnQuit</Name>
@@ -827,7 +827,7 @@
           <GUIMain>
             <NormalGUI>
               <OnClick />
-              <Height>20</Height>
+              <Height>19</Height>
               <Width>125</Width>
               <Left>0</Left>
               <Top>0</Top>
@@ -859,7 +859,7 @@
                 <Locked>False</Locked>
                 <Width>30</Width>
                 <Left>4</Left>
-                <Top>4</Top>
+                <Top>3</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>bStart</Name>
@@ -880,7 +880,7 @@
                 <Locked>False</Locked>
                 <Width>33</Width>
                 <Left>44</Left>
-                <Top>4</Top>
+                <Top>3</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>bOptions</Name>
@@ -901,7 +901,7 @@
                 <Locked>False</Locked>
                 <Width>30</Width>
                 <Left>86</Left>
-                <Top>4</Top>
+                <Top>3</Top>
                 <ZOrder>2</ZOrder>
                 <ID>2</ID>
                 <Name>bQuit</Name>
@@ -914,7 +914,7 @@
               <Height>150</Height>
               <Width>280</Width>
               <Left>35</Left>
-              <Top>25</Top>
+              <Top>24</Top>
               <Clickable>True</Clickable>
               <Visibility>PopupModal</Visibility>
               <PopupYPos>0</PopupYPos>
@@ -936,7 +936,7 @@
                 <Locked>False</Locked>
                 <Width>223</Width>
                 <Left>20</Left>
-                <Top>7</Top>
+                <Top>6</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>Label5</Name>
@@ -951,7 +951,7 @@
                 <Locked>False</Locked>
                 <Width>181</Width>
                 <Left>7</Left>
-                <Top>19</Top>
+                <Top>18</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>txtNewSaveName</Name>
@@ -972,7 +972,7 @@
                 <Locked>False</Locked>
                 <Width>75</Width>
                 <Left>192</Left>
-                <Top>19</Top>
+                <Top>18</Top>
                 <ZOrder>2</ZOrder>
                 <ID>2</ID>
                 <Name>btnSaveGame</Name>
@@ -989,11 +989,11 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Image>0</Image>
                 <Text>Cancel</Text>
-                <Height>20</Height>
+                <Height>19</Height>
                 <Locked>False</Locked>
                 <Width>60</Width>
                 <Left>208</Left>
-                <Top>101</Top>
+                <Top>100</Top>
                 <ZOrder>3</ZOrder>
                 <ID>3</ID>
                 <Name>btnCancelSave</Name>
@@ -1012,7 +1012,7 @@
                 <Locked>False</Locked>
                 <Width>192</Width>
                 <Left>7</Left>
-                <Top>53</Top>
+                <Top>52</Top>
                 <ZOrder>4</ZOrder>
                 <ID>4</ID>
                 <Name>lstSaveGamesList</Name>
@@ -1029,11 +1029,11 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Image>0</Image>
                 <Text>Delete</Text>
-                <Height>20</Height>
+                <Height>19</Height>
                 <Locked>False</Locked>
                 <Width>50</Width>
                 <Left>208</Left>
-                <Top>68</Top>
+                <Top>67</Top>
                 <ZOrder>5</ZOrder>
                 <ID>5</ID>
                 <Name>btnDeleteSave</Name>
@@ -1043,10 +1043,10 @@
           <GUIMain>
             <NormalGUI>
               <OnClick />
-              <Height>175</Height>
+              <Height>174</Height>
               <Width>275</Width>
               <Left>35</Left>
-              <Top>25</Top>
+              <Top>24</Top>
               <Clickable>True</Clickable>
               <Visibility>PopupModal</Visibility>
               <PopupYPos>0</PopupYPos>
@@ -1064,7 +1064,7 @@
                 <TextColor>0</TextColor>
                 <Font>0</Font>
                 <Text xml:space="preserve">Please choose the game that you want to load:</Text>
-                <Height>17</Height>
+                <Height>16</Height>
                 <Locked>False</Locked>
                 <Width>199</Width>
                 <Left>20</Left>
@@ -1089,7 +1089,7 @@
                 <Locked>False</Locked>
                 <Width>77</Width>
                 <Left>182</Left>
-                <Top>29</Top>
+                <Top>28</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>btnRestoreGame</Name>
@@ -1106,11 +1106,11 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Image>0</Image>
                 <Text>Cancel</Text>
-                <Height>25</Height>
+                <Height>24</Height>
                 <Locked>False</Locked>
                 <Width>76</Width>
                 <Left>182</Left>
-                <Top>67</Top>
+                <Top>66</Top>
                 <ZOrder>2</ZOrder>
                 <ID>2</ID>
                 <Name>btnCancelRestore</Name>
@@ -1129,7 +1129,7 @@
                 <Locked>False</Locked>
                 <Width>153</Width>
                 <Left>20</Left>
-                <Top>29</Top>
+                <Top>28</Top>
                 <ZOrder>3</ZOrder>
                 <ID>3</ID>
                 <Name>lstRestoreGamesList</Name>
@@ -1171,7 +1171,7 @@
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>195</Left>
-                <Top>25</Top>
+                <Top>24</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>btnResume</Name>
@@ -1192,7 +1192,7 @@
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>10</Left>
-                <Top>25</Top>
+                <Top>24</Top>
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>btnSave</Name>
@@ -1213,7 +1213,7 @@
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>195</Left>
-                <Top>50</Top>
+                <Top>49</Top>
                 <ZOrder>2</ZOrder>
                 <ID>2</ID>
                 <Name>btnQuit2</Name>
@@ -1226,11 +1226,11 @@
                 <MinValue>0</MinValue>
                 <MaxValue>100</MaxValue>
                 <Value>100</Value>
-                <Height>10</Height>
+                <Height>9</Height>
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>10</Left>
-                <Top>100</Top>
+                <Top>99</Top>
                 <ZOrder>3</ZOrder>
                 <ID>3</ID>
                 <Name>sldAudio</Name>
@@ -1251,7 +1251,7 @@
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>10</Left>
-                <Top>50</Top>
+                <Top>49</Top>
                 <ZOrder>4</ZOrder>
                 <ID>4</ID>
                 <Name>btnLoad</Name>
@@ -1261,11 +1261,11 @@
                 <TextColor>15</TextColor>
                 <Font>1</Font>
                 <Text xml:space="preserve">Audio Volume</Text>
-                <Height>10</Height>
+                <Height>9</Height>
                 <Locked>False</Locked>
                 <Width>97</Width>
                 <Left>10</Left>
-                <Top>82</Top>
+                <Top>81</Top>
                 <ZOrder>5</ZOrder>
                 <ID>5</ID>
                 <Name>Label1</Name>
@@ -1278,11 +1278,11 @@
                 <MinValue>10</MinValue>
                 <MaxValue>100</MaxValue>
                 <Value>40</Value>
-                <Height>10</Height>
+                <Height>9</Height>
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>195</Left>
-                <Top>100</Top>
+                <Top>99</Top>
                 <ZOrder>6</ZOrder>
                 <ID>6</ID>
                 <Name>sldSpeed</Name>
@@ -1292,11 +1292,11 @@
                 <TextColor>15</TextColor>
                 <Font>1</Font>
                 <Text xml:space="preserve">Game Speed</Text>
-                <Height>10</Height>
+                <Height>9</Height>
                 <Locked>False</Locked>
                 <Width>100</Width>
                 <Left>195</Left>
-                <Top>82</Top>
+                <Top>81</Top>
                 <ZOrder>7</ZOrder>
                 <ID>7</ID>
                 <Name>Label2</Name>
@@ -1310,7 +1310,7 @@
                 <Locked>False</Locked>
                 <Width>195</Width>
                 <Left>57</Left>
-                <Top>4</Top>
+                <Top>3</Top>
                 <ZOrder>8</ZOrder>
                 <ID>8</ID>
                 <Name>Label3</Name>
@@ -1504,10 +1504,10 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>1</StartingRoom>
-            <StartX>202</StartX>
-            <StartY>194</StartY>
+            <StartX>214</StartX>
+            <StartY>173</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
-            <MovementSpeed>5</MovementSpeed>
+            <MovementSpeed>9</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <AnimationDelay>4</AnimationDelay>
@@ -2478,7 +2478,13 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Church">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="83" Width="500" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/background/churchlobby.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Studio">
                 <SubFolders />
@@ -4184,7 +4190,7 @@ return
                     <DefaultVolume>-1</DefaultVolume>
                     <DefaultPriority>Inherit</DefaultPriority>
                     <DefaultRepeat>Inherit</DefaultRepeat>
-                    <FileLastModifiedDate>2017-08-13 18:02:36Z</FileLastModifiedDate>
+                    <FileLastModifiedDate>2017-08-13 18:05:54Z</FileLastModifiedDate>
                   </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
