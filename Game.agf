@@ -1317,6 +1317,67 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>132</Height>
+              <Width>212</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>100</BackgroundImage>
+              <ID>6</ID>
+              <Name>gGPS</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIListBox>
+                <OnSelectionChanged />
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <ShowBorder>False</ShowBorder>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>33808</TextColor>
+                <SelectedTextColor>1536</SelectedTextColor>
+                <SelectedBackgroundColor>0</SelectedBackgroundColor>
+                <Font>2</Font>
+                <Translated>True</Translated>
+                <Height>61</Height>
+                <Locked>False</Locked>
+                <Width>164</Width>
+                <Left>23</Left>
+                <Top>29</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>lGPS</Name>
+              </GUIListBox>
+              <GUIButton>
+                <OnClick />
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopMiddle</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>2</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>GO!</Text>
+                <Height>11</Height>
+                <Locked>False</Locked>
+                <Width>37</Width>
+                <Left>146</Left>
+                <Top>96</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>bGPS_go</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1702,7 +1763,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>301</StartingRoom>
+            <StartingRoom>3</StartingRoom>
             <StartX>214</StartX>
             <StartY>173</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -1802,8 +1863,8 @@ return
     <Cursors>
       <MouseCursor>
         <ID>0</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1814,8 +1875,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>1</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1826,8 +1887,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>2</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1838,8 +1899,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>3</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>True</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1850,8 +1911,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>4</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1862,8 +1923,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>5</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1874,8 +1935,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>6</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1886,10 +1947,10 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>7</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>3</HotspotY>
         <StandardMode>False</StandardMode>
-        <Image>49</Image>
+        <Image>99</Image>
         <View>0</View>
         <Animate>False</Animate>
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
@@ -1898,8 +1959,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>8</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>4</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -1910,8 +1971,8 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>9</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>4</HotspotX>
+        <HotspotY>5</HotspotY>
         <StandardMode>False</StandardMode>
         <Image>31</Image>
         <View>0</View>
@@ -2234,10 +2295,21 @@ return
                       <FileName>Images/GUI/Cursors/blank.png</FileName>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="99" Width="9" Height="9" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/GUI/Cursors/timer.png</FileName>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
             </SubFolders>
-            <Sprites />
+            <Sprites>
+              <Sprite Slot="100" Width="213" Height="131" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/GUI/GPS.png</FileName>
+                </Source>
+              </Sprite>
+            </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Inventory">
             <SubFolders />
@@ -2742,7 +2814,13 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Studio">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="95" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/background/studio.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="RadioStation">
                 <SubFolders />
@@ -2798,7 +2876,23 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Studio">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="96" Width="27" Height="29" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/cat1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="97" Width="27" Height="29" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/cat2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="98" Width="27" Height="29" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/cat3.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="RadioStation">
                 <SubFolders />
@@ -3812,6 +3906,135 @@ return
                       <ViewFrame>
                         <ID>8</ID>
                         <Image>11</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Studio">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>9</ID>
+                <Name>Cat</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>96</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>97</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>98</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>97</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>98</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>97</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>96</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>98</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>97</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>9</ID>
+                        <Image>97</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>10</ID>
+                        <Image>96</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>11</ID>
+                        <Image>98</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>12</ID>
+                        <Image>97</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>13</ID>
+                        <Image>98</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>14</ID>
+                        <Image>96</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>15</ID>
+                        <Image>98</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
