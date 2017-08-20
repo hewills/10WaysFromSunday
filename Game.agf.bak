@@ -642,6 +642,10 @@
             <Description xml:space="preserve">church lobby</Description>
           </UnloadedRoom>
           <UnloadedRoom>
+            <Number>13</Number>
+            <Description xml:space="preserve">church sanctuary 1</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
             <Number>2</Number>
             <Description xml:space="preserve">church sanctuary</Description>
           </UnloadedRoom>
@@ -1763,9 +1767,9 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>3</StartingRoom>
-            <StartX>181</StartX>
-            <StartY>188</StartY>
+            <StartingRoom>2</StartingRoom>
+            <StartX>173</StartX>
+            <StartY>233</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>11</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -2810,6 +2814,16 @@ return
                       <FileName>Images/01_church_lobby/background/churchlobby.png</FileName>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="103" Width="300" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/background/sanctuary1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="104" Width="300" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/background/sanctuary2.png</FileName>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Studio">
@@ -2824,7 +2838,18 @@ return
               </SpriteFolder>
               <SpriteFolder Name="RadioStation">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="101" Width="300" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/04_radio_front/background/radiostation.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="102" Width="300" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/05_radio_lobby/background/radiostation_lobby.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Mercury">
                 <SubFolders />
