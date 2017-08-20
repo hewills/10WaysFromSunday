@@ -1767,9 +1767,9 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>2</StartingRoom>
-            <StartX>173</StartX>
-            <StartY>233</StartY>
+            <StartingRoom>7</StartingRoom>
+            <StartX>291</StartX>
+            <StartY>214</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>11</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -2849,11 +2849,27 @@ return
                       <FileName>Images/05_radio_lobby/background/radiostation_lobby.png</FileName>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="107" Width="320" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/06_radio_booth/background/DJbooth.png</FileName>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Mercury">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="105" Width="500" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/07_mercury_motors/background/mercurymotors1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="106" Width="500" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/07_mercury_motors/background/mercurymotors2.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Downtown">
                 <SubFolders />
