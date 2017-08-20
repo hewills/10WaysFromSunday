@@ -1767,9 +1767,9 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>7</StartingRoom>
-            <StartX>291</StartX>
-            <StartY>214</StartY>
+            <StartingRoom>300</StartingRoom>
+            <StartX>166</StartX>
+            <StartY>218</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>11</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -2873,7 +2873,13 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Downtown">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="108" Width="320" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/08_downtown_outside/background/downtown.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="MovieTheater">
                 <SubFolders />
