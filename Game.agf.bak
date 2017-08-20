@@ -674,10 +674,6 @@
             <Description>downtown</Description>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Number>9</Number>
-            <Description xml:space="preserve">movie theater</Description>
-          </UnloadedRoom>
-          <UnloadedRoom>
             <Number>10</Number>
             <Description>bar</Description>
           </UnloadedRoom>
@@ -1382,6 +1378,26 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>200</Height>
+              <Width>300</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>109</BackgroundImage>
+              <ID>7</ID>
+              <Name>gList</Name>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1393,7 +1409,7 @@
             <ID>1</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>85</Image>
             <Description>List</Description>
@@ -1411,7 +1427,7 @@
             <ID>2</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>84</Image>
             <Description>Draino</Description>
@@ -1429,7 +1445,7 @@
             <ID>3</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>86</Image>
             <Description>Marker</Description>
@@ -1447,7 +1463,7 @@
             <ID>4</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>92</Image>
             <Description xml:space="preserve">Sheet music</Description>
@@ -1465,7 +1481,7 @@
             <ID>5</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>91</Image>
             <Description>Scissors</Description>
@@ -1483,7 +1499,7 @@
             <ID>6</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>90</Image>
             <Description xml:space="preserve">Wedding Ring</Description>
@@ -1519,7 +1535,7 @@
             <ID>8</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>94</Image>
             <Description>Wood</Description>
@@ -1537,7 +1553,7 @@
             <ID>9</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>88</Image>
             <Description>Paper</Description>
@@ -1555,7 +1571,7 @@
             <ID>10</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>87</Image>
             <Description>Nails</Description>
@@ -1573,7 +1589,7 @@
             <ID>11</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>93</Image>
             <Description xml:space="preserve">Ten Dollars</Description>
@@ -1767,16 +1783,16 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>300</StartingRoom>
-            <StartX>166</StartX>
-            <StartY>218</StartY>
+            <StartingRoom>1</StartingRoom>
+            <StartX>112</StartX>
+            <StartY>232</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>11</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <AnimationDelay>4</AnimationDelay>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>50688</SpeechColor>
+            <SpeechColor>1536</SpeechColor>
             <Solid>True</Solid>
             <Clickable>False</Clickable>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
@@ -2421,6 +2437,16 @@ return
               <Sprite Slot="94" Width="25" Height="20" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
                   <FileName>Images/inventory/wood.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="109" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="110" Width="145" Height="13" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/redline.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
