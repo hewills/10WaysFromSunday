@@ -1,0 +1,252 @@
+
+///////////////////////////////////////////////////////////////////////////
+//                *** AGS SnowRain plugin [ver 2.02] ***                 //
+///////////////////////////////////////////////////////////////////////////
+                           - Quick reference -
+
+
+NOTES:	- This version of the snow/rain plugin requires AGS v2.71 or above.
+	- Fixed the plugin didn't work with AGS v2.71.
+	- The "alleg40.dll" file is not required anymore.
+
+
+=================
+1. Introduction:
+=================
+	The plugin is to be used with Adventure Game Studio, a powerful
+	adventure game creation system developed by Chris Jones. Please 
+	visit http://www.adventuregamestudio.co.uk/ for more info.
+
+
+=================
+2. Installation:
+=================
+	Ok. First of all you need to install the plugin. Just copy a file
+	called 'ags_snowrain.dll' into the AGS main folder. Next run 
+        'agsedit.exe', start new(load) your game and go to the Plugin
+	Manager (Main menu -> Game -> Plugin manager...) - the plugin should be
+	listed there. Select one for your game by checking the box. Also you can
+	view additional info by clicking properties button. Now you've installed
+	the plugin.
+	
+
+=================
+3. Description:
+=================
+	SnowRain plugin is used for adding snow rain effects to your game.
+	Run SnowRain test game for demonstration.
+ 
+=================
+4. Scripting:
+=================
+	The next functions provide snow/rain control.
+	Most of the functions require MIN and MAX values to pass in so
+	the MAX value must be greater or equal to MIN value.
+	
+		
+	====================================
+	Snow control functions:
+	====================================
+	
+	------------------------------------------------------------
+	void srSetSnowDriftRange(int min_value, int max_value)
+	------------------------------------------------------------
+
+	Sets snowflakes drift range. Values range [0..100].
+	
+	Example:
+	========
+		srSetSnowDriftRange(10, 50);
+
+
+
+
+	------------------------------------------------------------
+	void srSetSnowDriftSpeed(int min_value, int max_value)
+	------------------------------------------------------------
+
+	Sets snowflakes drift speed. Values range [0..200].
+	
+	Example:
+	========
+		srSetSnowDriftSpeed(10, 50);
+
+
+
+
+
+	------------------------------------------------------------
+	void srSetSnowFallSpeed(int min_value, int max_value)
+	------------------------------------------------------------
+
+	Sets snowflakes falling speed. Values range [1..1000].
+
+	Example:
+	========
+		srSetSnowFallSpeed(50, 200);
+	
+
+
+
+        ------------------------------------------------------------
+	void srChangeSnowAmount(int amount)
+	------------------------------------------------------------
+	Changes snow amount to 'amount' value. Amount range [0..1000].
+	
+	Example:
+	========
+		srChangeSnowAmount(100);
+
+
+        ------------------------------------------------------------
+	void srSetSnowBaseline(int top, int bottom)
+	------------------------------------------------------------
+	Sets snow baselines (top and bottom ones). These baselines
+	determine the edges the snow falls between. Range [0..200].
+
+	Example:
+	========
+		srSetSnowBaseline(150, 200);
+	
+
+
+        ------------------------------------------------------------
+	void srSetSnowTransparency(int min_value, int max_value)
+	------------------------------------------------------------
+	Changes snow transparency. Range [0..100]
+	Note: this function works only for HI-Color mode.
+
+	Example:
+	========
+		srSetSnowTransparency(50, 60);
+
+
+
+        ------------------------------------------------------------
+	void srSetSnowDefaultView(int view, int loop)
+	------------------------------------------------------------
+	Sets snow default view/loop. This view/loop is used for all
+	kinds of flakes which haven't their own special view/loop.
+
+	Example:
+	========
+		srSetSnowDefaultView(3, 0); //view=3; loop=0;
+
+
+
+
+	------------------------------------------------------------
+	void srSetSnowWindSpeed(int value)
+	------------------------------------------------------------
+	Sets wind speed for snow. Range [-200..200]. 0 disables wind.
+
+	Example:
+	========
+		srSetSnowWindSpeed(-35);
+
+
+        ------------------------------------------------------------
+	void srSetSnowAmount(int amount)
+	------------------------------------------------------------
+	The same as srChangeSnowAmount(int amount) but performs all
+	settings immediately. Amount range [0..1000]. 0 disables snow.
+
+	Example:
+	========
+		srSetSnowAmount(400);
+
+
+	---------------------------------------------------------------
+	void srSetSnowView(int kind_id, int event, int view, int loop)
+	---------------------------------------------------------------
+	Sets special view/loop for specified kind of flake. There are 
+	total 4 kinds [0..3] of flakes you can use. 'kind_id' determines
+	snowflake kind you want apply view changes to. 'kind_id' Range [0..3].
+	'event' is special parameter reserved for future (you should pass 0 for now).
+	'view' and 'loop' is a new view/loop that will be used for that kind 
+	of flake. If you don't specify view/loop for some kind then default
+	view is used instead (see. srSetSnowDefaultView()).
+
+	Example:
+	========
+		//===========kind_id===event(always 0)===== view ==== loop ===
+		srSetSnowView(0,              0,              4,       0);
+		srSetSnowView(1,              0,              4,       1);
+		srSetSnowView(3,              0,              3,       1);
+		//Note: kind_id number 2 use default view in that case.
+
+
+
+
+
+
+
+
+	====================================================
+  	 Rain control functions(same as for snow):
+	====================================================
+
+
+	---------------------------------------------------------------
+	void srChangeRainAmount(int amount)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainView(int kind_id, int event, int view, int loop)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainDefaultView(int view, int loop)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainTransparency(int min_value, int max_value)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainWindSpeed(int value)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainBaseline(int top, int bottom)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainAmount(int amount)
+	---------------------------------------------------------------
+
+	---------------------------------------------------------------
+	void srSetRainFallSpeed(int min_value, int max_value)
+	---------------------------------------------------------------
+
+
+
+	====================================================
+  	 Both Snow&Rain control functions:
+	====================================================
+
+	---------------------------------------------------------------
+	void srSetWindSpeed(int value)
+	---------------------------------------------------------------
+	Sets wind speed for both snow and rain. Range [-200..200].
+
+
+	---------------------------------------------------------------
+	void srSetBaseline(int top, int bottom)
+	---------------------------------------------------------------
+	Sets (top/bottom) baselines for both snow and rain. Range [0..200].
+
+	
+
+==================
+5. Tech problems:
+==================
+	Please report any bugs you have found or ask questions to:
+	<email: sco05@yandex.ru>
+
+	Thanks for reading and enjoy creating with AGS!
+
+
+						-Scorpiorus-
+
+[END OF FILE].
