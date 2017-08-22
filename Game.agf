@@ -1401,7 +1401,7 @@
           </GUIMain>
           <GUIMain>
             <NormalGUI>
-              <OnClick />
+              <OnClick>gList_OnClick</OnClick>
               <Height>200</Height>
               <Width>300</Width>
               <Left>0</Left>
@@ -3142,7 +3142,13 @@ stop
               </SpriteFolder>
               <SpriteFolder Name="Mercury">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="18" Width="10" Height="3" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/07_mercury_motors/sprites/dollar.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Downtown">
                 <SubFolders />
