@@ -74,7 +74,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>10WaysfromSunday</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>12</AudioIndexer>
+      <AudioIndexer>16</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
     </Settings>
     <LipSync>
@@ -1356,7 +1356,7 @@
                 <Name>lGPS</Name>
               </GUIListBox>
               <GUIButton>
-                <OnClick />
+                <OnClick>bGPS_go_OnClick</OnClick>
                 <ClickAction>RunScript</ClickAction>
                 <NewModeNumber>0</NewModeNumber>
                 <ClipImage>False</ClipImage>
@@ -1375,6 +1375,27 @@
                 <ZOrder>1</ZOrder>
                 <ID>1</ID>
                 <Name>bGPS_go</Name>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>bCancel_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>2</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Cancel</Text>
+                <Height>12</Height>
+                <Locked>False</Locked>
+                <Width>40</Width>
+                <Left>146</Left>
+                <Top>15</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name>bCancel</Name>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -1396,7 +1417,29 @@
               <ID>7</ID>
               <Name>gList</Name>
             </NormalGUI>
-            <Controls />
+            <Controls>
+              <GUIButton>
+                <OnClick>bListClose_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>2</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>CLOSE</Text>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>48</Width>
+                <Left>69</Left>
+                <Top>174</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>bListClose</Name>
+              </GUIButton>
+            </Controls>
           </GUIMain>
         </GUIs>
       </GUIFolder>
@@ -1416,7 +1459,7 @@
             <Name>iList</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iList_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1434,7 +1477,7 @@
             <Name>iDraino</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iDraino_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1452,7 +1495,7 @@
             <Name>iMarker</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iMarker_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1470,7 +1513,7 @@
             <Name>iMusic</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iMusic_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1488,7 +1531,7 @@
             <Name>iScissors</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iScissors_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1506,7 +1549,7 @@
             <Name>iRing</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iRing_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1517,14 +1560,14 @@
             <ID>7</ID>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <CursorImage>0</CursorImage>
             <Image>89</Image>
             <Description>Cellphone</Description>
             <Name>iPhone</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iPhone_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1542,7 +1585,7 @@
             <Name>iWood</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iWood_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1560,7 +1603,7 @@
             <Name>iPaper</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iPaper_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1578,7 +1621,7 @@
             <Name>iNails</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iNails_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1596,7 +1639,7 @@
             <Name>iMoney</Name>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iMoney_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
@@ -1784,8 +1827,8 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>1</StartingRoom>
-            <StartX>112</StartX>
-            <StartY>232</StartY>
+            <StartX>352</StartX>
+            <StartY>224</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>11</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -1854,6 +1897,46 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <ID>2</ID>
+            <ScriptName>cMercury</ScriptName>
+            <RealName>Mercury</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>2</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>7</StartingRoom>
+            <StartX>400</StartX>
+            <StartY>20</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>63488</SpeechColor>
+            <Solid>False</Solid>
+            <Clickable>False</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -1861,18 +1944,52 @@
     <Dialogs>
       <DialogFolder Name="Main">
         <SubFolders>
-          <DialogFolder Name="intro">
+          <DialogFolder Name="Mercury">
             <SubFolders />
             <Dialogs>
               <Dialog>
                 <ID>0</ID>
-                <Name>dDialog1</Name>
+                <Name>dWorship</Name>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+Debra: What do you say to a god?
 return
+@1
+stop
+@2
+stop
+@3
+stop
+@4
+stop
 ]]></Script>
-                <DialogOptions />
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'm not worthy! I'm not worthy!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Oh Mercury, you're so fine, you're so fine you blow my mind!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">You're the god for me Mercury!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text xml:space="preserve">Never mind.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
               </Dialog>
             </Dialogs>
           </DialogFolder>
@@ -2444,9 +2561,54 @@ return
                   <FileName>Images/inventory/10comm.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="110" Width="145" Height="13" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="110" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/redline.png</FileName>
+                  <FileName>Images/inventory/10comm1.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="111" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm2.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="112" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm3.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="113" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm4.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="114" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm5.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="115" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm6.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="116" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm7.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="117" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm8.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="118" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm9.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="119" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/inventory/10comm10.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -2810,21 +2972,7 @@ return
                 <Sprites />
               </SpriteFolder>
             </SubFolders>
-            <Sprites>
-              <Sprite Slot="18" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="19" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="20" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="21" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="22" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="23" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="24" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="25" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="26" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="27" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="28" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="29" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-              <Sprite Slot="30" Width="30" Height="83" ColorDepth="16" Resolution="LowRes" AlphaChannel="False" />
-            </Sprites>
+            <Sprites />
           </SpriteFolder>
           <SpriteFolder Name="Backgrounds">
             <SubFolders>
@@ -2945,7 +3093,28 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Church">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="120" Width="9" Height="11" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/bucket.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="121" Width="5" Height="3" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/Nails.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="122" Width="22" Height="14" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/organtop.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="123" Width="24" Height="24" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/wood.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Studio">
                 <SubFolders />
@@ -4932,7 +5101,32 @@ return
               </AudioClipFolder>
               <AudioClipFolder Name="Church Sanctuary">
                 <SubFolders />
-                <AudioClips />
+                <AudioClips>
+                  <AudioClip>
+                    <SourceFileName>Music/02_church_sanctuary/Debraorgan.ogg</SourceFileName>
+                    <ScriptName>aDebraorgan</ScriptName>
+                    <Index>13</Index>
+                    <Type>2</Type>
+                    <BundlingType>InSeparateVOX</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-21 05:45:13Z</FileLastModifiedDate>
+                  </AudioClip>
+                  <AudioClip>
+                    <SourceFileName>Music/02_church_sanctuary/tocatta_organ.ogg</SourceFileName>
+                    <ScriptName>aTocatta_organ</ScriptName>
+                    <Index>14</Index>
+                    <Type>2</Type>
+                    <BundlingType>InSeparateVOX</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-21 02:03:26Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
                 <AudioClipFolder>
                   <DefaultVolume>100</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
@@ -5034,6 +5228,18 @@ return
                     <DefaultPriority>Inherit</DefaultPriority>
                     <DefaultRepeat>Inherit</DefaultRepeat>
                     <FileLastModifiedDate>2017-08-12 19:54:43Z</FileLastModifiedDate>
+                  </AudioClip>
+                  <AudioClip>
+                    <SourceFileName>Sound/thunder.ogg</SourceFileName>
+                    <ScriptName>aThunder</ScriptName>
+                    <Index>16</Index>
+                    <Type>3</Type>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-21 05:38:37Z</FileLastModifiedDate>
                   </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
