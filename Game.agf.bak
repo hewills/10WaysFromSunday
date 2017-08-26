@@ -1826,7 +1826,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>300</StartingRoom>
             <StartX>352</StartX>
             <StartY>224</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2941,15 +2941,173 @@ stop
               </SpriteFolder>
               <SpriteFolder Name="Organist">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="131" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/Organist/Org_1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="132" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/Organist/Org_2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="133" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/Organist/Org_3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="134" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/Organist/Org_4.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="135" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/02_church_sanctuary/sprites/Organist/Org_die.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Receptionist">
-                <SubFolders />
+                <SubFolders>
+                  <SpriteFolder Name="Walk">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="19" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="20" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="21" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="22" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="23" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_4.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="24" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_5.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="25" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_6.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="26" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_7.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="27" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Walk/Recep_walk_8.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Talk">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="28" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="29" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="30" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="124" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep4.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="125" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep5.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="126" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep6.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="127" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recep7.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                  <SpriteFolder Name="Drink">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="128" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Drink/Recep_drink_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="129" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Drink/Recep_drink_2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="130" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/05_radio_lobby/sprites/Receptionist/Drink/Recep_drink_3.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                </SubFolders>
                 <Sprites />
               </SpriteFolder>
               <SpriteFolder Name="Cashier">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="136" Width="19" Height="24" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/08_downtown_outside/sprites/cashier_1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="137" Width="19" Height="24" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/08_downtown_outside/sprites/cashier_2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="138" Width="19" Height="24" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/08_downtown_outside/sprites/cashier_3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="139" Width="19" Height="24" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/08_downtown_outside/sprites/cashier_4.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Salesman">
                 <SubFolders />
@@ -4283,6 +4441,131 @@ stop
                       <ViewFrame>
                         <ID>15</ID>
                         <Image>98</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Receptionist">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>10</ID>
+                <Name>Recep_talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>128</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>129</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>130</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Cashier">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>11</ID>
+                <Name>Cashier_talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>136</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>139</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>137</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>138</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>137</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>139</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>136</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>137</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>139</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>9</ID>
+                        <Image>138</Image>
                         <Flipped>False</Flipped>
                         <Delay>0</Delay>
                         <Sound>0</Sound>
