@@ -74,7 +74,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>10WaysfromSunday</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>25</AudioIndexer>
+      <AudioIndexer>26</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
     </Settings>
     <LipSync>
@@ -1441,6 +1441,48 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick>gPhone_OnClick</OnClick>
+              <Height>80</Height>
+              <Width>100</Width>
+              <Left>0</Left>
+              <Top>0</Top>
+              <Clickable>True</Clickable>
+              <Visibility>NormalButInitiallyOff</Visibility>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>0</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>167</BackgroundImage>
+              <ID>8</ID>
+              <Name>gPhone</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick>bClosephone_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>Centred</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>2</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>Close</Text>
+                <Height>10</Height>
+                <Locked>False</Locked>
+                <Width>47</Width>
+                <Left>36</Left>
+                <Top>69</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>bClosephone</Name>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1844,7 +1886,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>8</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <StartX>352</StartX>
             <StartY>224</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2069,6 +2111,126 @@
               <Event Index="1">cTeen_Interact</Event>
               <Event Index="2" />
               <Event Index="3">cTeen_UseInv</Event>
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>6</ID>
+            <ScriptName>cMom</ScriptName>
+            <RealName>Mom</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>2</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>300</StartingRoom>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>49176</SpeechColor>
+            <Solid>False</Solid>
+            <Clickable>False</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>False</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>7</ID>
+            <ScriptName>cDad</ScriptName>
+            <RealName>Dad</RealName>
+            <NormalView>2</NormalView>
+            <SpeechView>2</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>300</StartingRoom>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>1</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>56</SpeechColor>
+            <Solid>False</Solid>
+            <Clickable>False</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>False</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>8</ID>
+            <ScriptName>cSatan</ScriptName>
+            <RealName>Satan</RealName>
+            <NormalView>18</NormalView>
+            <SpeechView>19</SpeechView>
+            <IdleView>18</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>12</StartingRoom>
+            <StartX>244</StartX>
+            <StartY>198</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>8</AnimationDelay>
+            <SpeechAnimationDelay>10</SpeechAnimationDelay>
+            <SpeechColor>64512</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -2525,6 +2687,7 @@ narrator: **** 90 MINUTES LATER ****
   Wait(10);
   updateList(4);
   showList();
+  read_movie_sign = 2;
 stop
 @2
 Cashier: Come again real soon.
@@ -2549,6 +2712,72 @@ stop
                   <DialogOption>
                     <ID>3</ID>
                     <Text xml:space="preserve">Never mind.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Parents">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>11</ID>
+                <Name>dParents</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Debra: Um...I just wanted to tell you guys something.
+return
+@1
+Mom: What?
+Dad: Are you feeling okay?
+Debra: It's true. I'm not related to you at all.
+Mom: That's just ridiculous.
+Debra: So there. Now you know.
+narrator: <Hang up>
+  updateList(5);
+  showList();
+stop
+@2
+Dad: Who?
+Debra: The Weasleys, Dad! They know magic and everything.
+Mom: I think she's referring to Harry Potter.
+Dad: Well, that's just crazy.
+Debra: Sorry you're just not as cool.
+narrator: <Hang up>
+  updateList(5);
+  showList();
+stop
+@3
+Debra: Twice.
+Dad: Uh huh.
+Debra: With no thought of your back Mom.
+Mom: Well, I feel fine.
+Debra: Do you though?
+Mom: Yeah. Are you feeling okay honey?
+Debra: I'll probably do it again too.
+narrator: <Hang up>
+  updateList(5);
+  showList();
+stop]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'm adopted.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Why can't you be like the Weasleys.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">I stepped on a crack.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -2987,7 +3216,7 @@ stop
         <GlobalVariable>
           <Name>comm_done</Name>
           <Type>int</Type>
-          <DefaultValue>3</DefaultValue>
+          <DefaultValue>0</DefaultValue>
         </GlobalVariable>
         <GlobalVariable>
           <Name>talked_to_teen</Name>
@@ -3021,6 +3250,26 @@ stop
         </GlobalVariable>
         <GlobalVariable>
           <Name>read_movie_sign</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>look_at_decoration</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>rings</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>phoneRinging</Name>
+          <Type>AudioChannel*</Type>
+          <DefaultValue />
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>satan_arrives</Name>
           <Type>int</Type>
           <DefaultValue>0</DefaultValue>
         </GlobalVariable>
@@ -3061,6 +3310,11 @@ stop
               <Sprite Slot="100" Width="213" Height="131" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
                   <FileName>Images/GUI/GPS.png</FileName>
+                </Source>
+              </Sprite>
+              <Sprite Slot="167" Width="120" Height="74" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                <Source>
+                  <FileName>Images/GUI/cellbig.png</FileName>
                 </Source>
               </Sprite>
             </Sprites>
@@ -3834,6 +4088,36 @@ stop
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
+              <SpriteFolder Name="Satan">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="172" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/Satan.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="173" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/Satan1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="174" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/Satan2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="175" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/Satan3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="176" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/Satan4.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
             </SubFolders>
             <Sprites />
           </SpriteFolder>
@@ -3859,6 +4143,11 @@ stop
                   <Sprite Slot="104" Width="300" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                     <Source>
                       <FileName>Images/02_church_sanctuary/background/sanctuary2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="164" Width="500" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/background/churchlobby2.png</FileName>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -3977,6 +4266,16 @@ stop
                       <FileName>Images/02_church_sanctuary/sprites/wood.png</FileName>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="165" Width="51" Height="109" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/closet.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="166" Width="16" Height="16" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/draino.png</FileName>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Studio">
@@ -4010,6 +4309,26 @@ stop
                   <Sprite Slot="163" Width="24" Height="26" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                     <Source>
                       <FileName>Images/03_studio_inside/sprites/easel.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="168" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/poof1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="169" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/poof2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="170" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/poof3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="171" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/01_church_lobby/sprites/poof4.png</FileName>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -5956,6 +6275,222 @@ stop
               </View>
             </Views>
           </ViewFolder>
+          <ViewFolder Name="Satan">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>18</ID>
+                <Name>Satan_Idle</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>173</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>19</ID>
+                <Name>Satan_talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>173</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>172</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>173</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>174</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>172</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>175</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>176</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>173</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>174</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>9</ID>
+                        <Image>176</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Poof">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>20</ID>
+                <Name>Poof</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>168</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>169</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>170</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>171</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>168</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>169</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>169</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>169</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
         </SubFolders>
         <Views>
           <View>
@@ -7120,6 +7655,30 @@ stop
               <AudioClipFolder Name="Hell">
                 <SubFolders />
                 <AudioClips />
+                <AudioClipFolder>
+                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultPriority>Inherit</DefaultPriority>
+                  <DefaultRepeat>Inherit</DefaultRepeat>
+                  <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+                  <DefaultType>3</DefaultType>
+                </AudioClipFolder>
+              </AudioClipFolder>
+              <AudioClipFolder Name="Studio">
+                <SubFolders />
+                <AudioClips>
+                  <AudioClip>
+                    <SourceFileName>Sound/03_studio_inside/ringing.ogg</SourceFileName>
+                    <ScriptName>aRinging</ScriptName>
+                    <Index>26</Index>
+                    <Type>3</Type>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-27 19:04:06Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
                 <AudioClipFolder>
                   <DefaultVolume>100</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
