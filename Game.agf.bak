@@ -1844,7 +1844,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>8</StartingRoom>
             <StartX>352</StartX>
             <StartY>224</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2004,7 +2004,7 @@
             <IdleView>15</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>11</StartingRoom>
+            <StartingRoom>8</StartingRoom>
             <StartX>250</StartX>
             <StartY>155</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2025,8 +2025,8 @@
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
             <Properties />
             <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
+              <Event Index="0">cCashier_Look</Event>
+              <Event Index="1">cCashier_Interact</Event>
               <Event Index="2" />
               <Event Index="3" />
               <Event Index="4" />
@@ -2380,18 +2380,21 @@ return
    updateList(3);
    showList();
    talked_to_teen = 5;
+   cCashier.ChangeRoom(8, 250, 155);
 stop
 @2
    booth = 0;   
    updateList(3);
    showList();
    talked_to_teen = 5;
+   cCashier.ChangeRoom(8, 250, 155);
 stop
 @3
    booth = 0;   
    updateList(3);
    showList();
    talked_to_teen = 5;
+   cCashier.ChangeRoom(8, 250, 155);
 stop
 @4
 stop]]></Script>
@@ -2424,6 +2427,135 @@ stop]]></Script>
               </Dialog>
             </Dialogs>
           </DialogFolder>
+          <DialogFolder Name="Cashier">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>7</ID>
+                <Name>dCashier_presign</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Cashier: Welcome to Cinema 3. How can I help you?
+return
+@1
+Cashier: Which movie would you like to see?
+goto-dialog dCashier_presign2
+@2
+Cashier: Come again real soon.
+stop]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'd like to see a movie.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Never mind.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>8</ID>
+                <Name>dCashier_presign2</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+Cashier: Oh, okay then. Come back and see us sometime.
+stop]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I actually have no idea.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>9</ID>
+                <Name>dCashier_sign</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Cashier: Welcome to Cinema 3. How can I help you?
+return
+@1
+Cashier: Which movie would you like to see?
+goto-dialog dCashier_sign2
+@2
+Cashier: Come again real soon.
+stop]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I'd like to see a movie.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Never mind.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>10</ID>
+                <Name>dCashier_sign2</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+Debra: The special Sunday matinee showing of Troll 3.
+Cashier: Great! I've heard it's exceptionally bad.
+Cashier: Here's your ticket. Have fun!
+narrator: **** 90 MINUTES LATER ****
+  FadeOut(30);
+  Wait(40);
+  FadeIn(10);
+  Wait(10);
+  updateList(4);
+  showList();
+stop
+@2
+Cashier: Come again real soon.
+stop
+@3
+Cashier: Come again real soon.
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Sunday matinee</Text>
+                    <Show>True</Show>
+                    <Say>False</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">I actually have no idea.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">Never mind.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
         </SubFolders>
         <Dialogs />
       </DialogFolder>
@@ -2443,10 +2575,10 @@ stop]]></Script>
       </MouseCursor>
       <MouseCursor>
         <ID>1</ID>
-        <HotspotX>4</HotspotX>
-        <HotspotY>4</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>True</StandardMode>
-        <Image>31</Image>
+        <Image>140</Image>
         <View>0</View>
         <Animate>False</Animate>
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
@@ -2467,10 +2599,10 @@ stop]]></Script>
       </MouseCursor>
       <MouseCursor>
         <ID>3</ID>
-        <HotspotX>4</HotspotX>
-        <HotspotY>4</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>True</StandardMode>
-        <Image>31</Image>
+        <Image>140</Image>
         <View>0</View>
         <Animate>False</Animate>
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
@@ -2479,10 +2611,10 @@ stop]]></Script>
       </MouseCursor>
       <MouseCursor>
         <ID>4</ID>
-        <HotspotX>4</HotspotX>
-        <HotspotY>4</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>False</StandardMode>
-        <Image>31</Image>
+        <Image>140</Image>
         <View>0</View>
         <Animate>False</Animate>
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
@@ -2491,10 +2623,10 @@ stop]]></Script>
       </MouseCursor>
       <MouseCursor>
         <ID>5</ID>
-        <HotspotX>4</HotspotX>
-        <HotspotY>4</HotspotY>
+        <HotspotX>6</HotspotX>
+        <HotspotY>8</HotspotY>
         <StandardMode>False</StandardMode>
-        <Image>31</Image>
+        <Image>140</Image>
         <View>0</View>
         <Animate>False</Animate>
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
@@ -2855,7 +2987,7 @@ stop]]></Script>
         <GlobalVariable>
           <Name>comm_done</Name>
           <Type>int</Type>
-          <DefaultValue>0</DefaultValue>
+          <DefaultValue>3</DefaultValue>
         </GlobalVariable>
         <GlobalVariable>
           <Name>talked_to_teen</Name>
@@ -2884,6 +3016,11 @@ stop]]></Script>
         </GlobalVariable>
         <GlobalVariable>
           <Name>laptop_status</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>read_movie_sign</Name>
           <Type>int</Type>
           <DefaultValue>0</DefaultValue>
         </GlobalVariable>
@@ -3870,6 +4007,11 @@ stop]]></Script>
                       <FileName>Images/03_studio_inside/sprites/frame_god.png</FileName>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="163" Width="24" Height="26" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/easel.png</FileName>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="RadioStation">
@@ -3912,6 +4054,11 @@ stop]]></Script>
                   <Sprite Slot="145" Width="45" Height="20" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                     <Source>
                       <FileName>Images/08_downtown_outside/sprites/closed.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="162" Width="25" Height="20" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/08_downtown_outside/sprites/sign.png</FileName>
                     </Source>
                   </Sprite>
                 </Sprites>
