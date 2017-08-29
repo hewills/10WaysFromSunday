@@ -1433,8 +1433,8 @@
                 <Height>16</Height>
                 <Locked>False</Locked>
                 <Width>48</Width>
-                <Left>69</Left>
-                <Top>174</Top>
+                <Left>74</Left>
+                <Top>161</Top>
                 <ZOrder>0</ZOrder>
                 <ID>0</ID>
                 <Name>bListClose</Name>
@@ -3427,59 +3427,59 @@ stop]]></Script>
                   <FileName>Images/inventory/wood.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="109" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="109" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm.png</FileName>
+                  <FileName>Images/inventory/comm0.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="110" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="110" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm1.png</FileName>
+                  <FileName>Images/inventory/comm1.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="111" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="111" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm2.png</FileName>
+                  <FileName>Images/inventory/comm2.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="112" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="112" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm3.png</FileName>
+                  <FileName>Images/inventory/comm3.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="113" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="113" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm4.png</FileName>
+                  <FileName>Images/inventory/comm4.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="114" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="114" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm5.png</FileName>
+                  <FileName>Images/inventory/comm5.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="115" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="115" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm6.png</FileName>
+                  <FileName>Images/inventory/comm6.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="116" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="116" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm7.png</FileName>
+                  <FileName>Images/inventory/comm7.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="117" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="117" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm8.png</FileName>
+                  <FileName>Images/inventory/comm8.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="118" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="118" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm9.png</FileName>
+                  <FileName>Images/inventory/comm9.png</FileName>
                 </Source>
               </Sprite>
-              <Sprite Slot="119" Width="195" Height="180" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+              <Sprite Slot="119" Width="244" Height="165" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                 <Source>
-                  <FileName>Images/inventory/10comm10.png</FileName>
+                  <FileName>Images/inventory/comm10.png</FileName>
                 </Source>
               </Sprite>
               <Sprite Slot="146" Width="27" Height="19" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
