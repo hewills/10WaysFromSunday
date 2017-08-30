@@ -74,7 +74,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>10WaysfromSunday</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>26</AudioIndexer>
+      <AudioIndexer>27</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
     </Settings>
     <LipSync>
@@ -1558,7 +1558,7 @@
               <Event Index="0">iMusic_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
+              <Event Index="3">iMusic_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -1886,7 +1886,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>300</StartingRoom>
             <StartX>352</StartX>
             <StartY>224</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -2003,7 +2003,7 @@
             <RealName>Susan</RealName>
             <NormalView>12</NormalView>
             <SpeechView>10</SpeechView>
-            <IdleView>14</IdleView>
+            <IdleView>13</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>5</StartingRoom>
@@ -2237,6 +2237,126 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <ID>9</ID>
+            <ScriptName>cBar</ScriptName>
+            <RealName>Bartender</RealName>
+            <NormalView>29</NormalView>
+            <SpeechView>24</SpeechView>
+            <IdleView>29</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>10</StartingRoom>
+            <StartX>146</StartX>
+            <StartY>89</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0">cBar_Look</Event>
+              <Event Index="1">cBar_Interact</Event>
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>10</ID>
+            <ScriptName>cSkip</ScriptName>
+            <RealName>Skip</RealName>
+            <NormalView>30</NormalView>
+            <SpeechView>25</SpeechView>
+            <IdleView>30</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>30</BlinkingView>
+            <StartingRoom>10</StartingRoom>
+            <StartX>119</StartX>
+            <StartY>179</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>64512</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0">cSkip_Look</Event>
+              <Event Index="1">cSkip_Interact</Event>
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>11</ID>
+            <ScriptName>cBob</ScriptName>
+            <RealName>Bob</RealName>
+            <NormalView>31</NormalView>
+            <SpeechView>32</SpeechView>
+            <IdleView>31</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>11</StartingRoom>
+            <StartX>143</StartX>
+            <StartY>129</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>1560</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0">cBob_Look</Event>
+              <Event Index="1">cBob_Interact</Event>
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -2426,6 +2546,7 @@ Debra: Motivation?
 Teen: Cash.
 Debra: Oh.
 option-off-forever 3
+  talked_to_teen = 1;
 stop
 @4
 Teen: Probably not.
@@ -2778,6 +2899,183 @@ stop]]></Script>
                   <DialogOption>
                     <ID>3</ID>
                     <Text xml:space="preserve">I stepped on a crack.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Bartender">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>12</ID>
+                <Name>dBartender</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Debra: Hi!
+return
+@1
+Bar: Go away.
+stop
+@2
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">How are you?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text>Goodbye.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Skip">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>13</ID>
+                <Name>dSkip_meetcute</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Debra:Hi!
+Skip:Hi!
+Skip: Have a seat!
+Debra:No thanks, I'm in a hurry.
+return
+@1
+Skip: Uh, maybe?
+return
+@2
+Skip: You're beautiful!
+return
+@3
+Skip: Hey, thanks, you too!
+goto-dialog dSkip_ohboy
+@4
+Skip: Sure!
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">Are you looking for fun?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Do you like what you see?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">You're cute!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text>Goodbye.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>14</ID>
+                <Name>dSkip_ohboy</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+Skip: You're funny!
+option-off-forever 1
+return
+@2
+Skip: Oh, I don't know.
+option-off-forever 2
+return
+@3
+Skip: Oh boy!
+  leave_bar();
+stop
+@4
+Skip: Sure!
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">You have the cutest moustache.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Wanna watch some Netflix and chill?</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Text xml:space="preserve">Let's get outta here!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Text>Ta-ta!</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Bob">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>15</ID>
+                <Name>dBob1</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+Debra: Hi Bob.
+return
+@1
+Bob: Are you okay?
+Debra: Never better!
+stop
+@2
+Bob: What?
+Debra: See ya!
+Bob: Okay, see you tommorrow!
+stop]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Text xml:space="preserve">I covet your ass.</Text>
+                    <Show>True</Show>
+                    <Say>True</Say>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Text xml:space="preserve">Can I have your stuff? I reeeeeally covet it.</Text>
                     <Show>True</Show>
                     <Say>True</Say>
                   </DialogOption>
@@ -3270,6 +3568,36 @@ stop]]></Script>
         </GlobalVariable>
         <GlobalVariable>
           <Name>satan_arrives</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>dminor</Name>
+          <Type>AudioChannel*</Type>
+          <DefaultValue />
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>organist_dead</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>receptionist_dead</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>saw_ring</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>skip_sleeping</Name>
+          <Type>int</Type>
+          <DefaultValue>0</DefaultValue>
+        </GlobalVariable>
+        <GlobalVariable>
+          <Name>called_police</Name>
           <Type>int</Type>
           <DefaultValue>0</DefaultValue>
         </GlobalVariable>
@@ -3985,7 +4313,13 @@ stop]]></Script>
                     </Sprites>
                   </SpriteFolder>
                 </SubFolders>
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="185" Width="60" Height="20" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/05_radio_lobby/sprites/Receptionist/Talk/Recepdead.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Cashier">
                 <SubFolders />
@@ -4118,6 +4452,36 @@ stop]]></Script>
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
+              <SpriteFolder Name="Bob">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="202" Width="18" Height="27" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/Bob.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="203" Width="18" Height="27" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/Bob1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="204" Width="18" Height="27" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/Bob2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="205" Width="18" Height="27" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/Bob3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="206" Width="18" Height="27" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/Bob4.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
             </SubFolders>
             <Sprites />
           </SpriteFolder>
@@ -4244,7 +4608,53 @@ stop]]></Script>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Church">
-                <SubFolders />
+                <SubFolders>
+                  <SpriteFolder Name="animation">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="177" Width="24" Height="16" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/animation/organtop2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="178" Width="22" Height="14" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/animation/organtop3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="179" Width="22" Height="14" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/animation/organtop4.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="180" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/Organist/Org_1.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="181" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/Organist/Org_2.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="182" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/Organist/Org_3.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="183" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/Organist/Org_4.png</FileName>
+                        </Source>
+                      </Sprite>
+                      <Sprite Slot="184" Width="31" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                        <Source>
+                          <FileName>Images/02_church_sanctuary/sprites/Organist/Org_die.png</FileName>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
+                </SubFolders>
                 <Sprites>
                   <Sprite Slot="120" Width="9" Height="11" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                     <Source>
@@ -4331,6 +4741,21 @@ stop]]></Script>
                       <FileName>Images/01_church_lobby/sprites/poof4.png</FileName>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="199" Width="98" Height="69" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/skip_sleeping.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="200" Width="7" Height="5" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/03_studio_inside/sprites/ring.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="201" Width="27" Height="29" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/wanted.png</FileName>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="RadioStation">
@@ -4384,7 +4809,73 @@ stop]]></Script>
               </SpriteFolder>
               <SpriteFolder Name="Bar">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="186" Width="27" Height="48" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/barman1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="187" Width="15" Height="25" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/bartender1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="188" Width="15" Height="25" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/bartender2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="189" Width="15" Height="25" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/bartender3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="190" Width="9" Height="9" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/beer_empty.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="191" Width="9" Height="9" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/beer_full.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="192" Width="40" Height="75" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="193" Width="22" Height="60" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man_sit_drink.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="194" Width="22" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man_sit1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="195" Width="22" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man_sit2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="196" Width="22" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man_sit3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="197" Width="22" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man_sit4.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="198" Width="22" Height="59" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/10_bar/sprites/man_sit5.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Heaven">
                 <SubFolders />
@@ -5515,6 +6006,117 @@ stop]]></Script>
                   </Loop>
                 </Loops>
               </View>
+              <View>
+                <ID>31</ID>
+                <Name>Bob_idle</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>202</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>32</ID>
+                <Name>Bob_Talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>202</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>203</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>205</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>206</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>205</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>203</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>206</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
             </Views>
           </ViewFolder>
           <ViewFolder Name="Receptionist">
@@ -5940,6 +6542,56 @@ stop]]></Script>
                         <Sound>0</Sound>
                       </ViewFrame>
                     </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>23</ID>
+                <Name>Recep_dead</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>185</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
                   </Loop>
                 </Loops>
               </View>
@@ -6486,6 +7138,514 @@ stop]]></Script>
                         <Sound>0</Sound>
                       </ViewFrame>
                     </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Organ">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>21</ID>
+                <Name>Organist</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>180</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>181</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>182</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>180</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>182</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>183</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>181</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>181</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>182</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>9</ID>
+                        <Image>183</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>184</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>22</ID>
+                <Name>Decoration</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>122</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>178</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>122</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>178</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>179</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>179</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>178</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>179</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>178</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>9</ID>
+                        <Image>179</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Bar">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>24</ID>
+                <Name>Bartender_Talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>187</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>188</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>189</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>188</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>187</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>189</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>25</ID>
+                <Name>Man_Talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>195</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>196</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>194</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>197</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>198</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>196</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>194</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>196</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>197</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>26</ID>
+                <Name>Man_Stand</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>192</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>27</ID>
+                <Name>Man_Sleep</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>49</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>28</ID>
+                <Name>Man_Drink</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>195</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>193</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>193</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>193</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>194</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>194</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>29</ID>
+                <Name>Bartender_idle</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>187</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>30</ID>
+                <Name>Man_Sit</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>195</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
                   </Loop>
                 </Loops>
               </View>
@@ -7330,9 +8490,21 @@ stop]]></Script>
                     <DefaultRepeat>Inherit</DefaultRepeat>
                     <FileLastModifiedDate>2017-08-21 02:03:26Z</FileLastModifiedDate>
                   </AudioClip>
+                  <AudioClip>
+                    <SourceFileName>Music/02_church_sanctuary/10Dminor.ogg</SourceFileName>
+                    <ScriptName>a10Dminor</ScriptName>
+                    <Index>27</Index>
+                    <Type>2</Type>
+                    <BundlingType>InSeparateVOX</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>50</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-29 01:03:22Z</FileLastModifiedDate>
+                  </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
-                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultVolume>60</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
                   <DefaultRepeat>Inherit</DefaultRepeat>
                   <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
@@ -7737,7 +8909,7 @@ stop]]></Script>
         <TypeID>4</TypeID>
         <Name xml:space="preserve">Faint Music</Name>
         <MaxChannels>0</MaxChannels>
-        <VolumeReductionWhileSpeechPlaying>0</VolumeReductionWhileSpeechPlaying>
+        <VolumeReductionWhileSpeechPlaying>20</VolumeReductionWhileSpeechPlaying>
         <CrossfadeClips>No</CrossfadeClips>
         <BackwardsCompatibilityType>False</BackwardsCompatibilityType>
       </AudioClipType>
