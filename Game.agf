@@ -74,7 +74,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>10WaysfromSunday</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>27</AudioIndexer>
+      <AudioIndexer>28</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
     </Settings>
     <LipSync>
@@ -1890,7 +1890,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>300</StartingRoom>
             <StartX>211</StartX>
             <StartY>214</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -4690,7 +4690,28 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Hell">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="212" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio11.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="213" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio12.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="214" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio13.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="215" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio14.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
             </SubFolders>
             <Sprites />
@@ -8678,6 +8699,30 @@ return
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
+                <FileName>Credits.ash</FileName>
+                <Name>Credits</Name>
+                <Description>Credits script module, to replace the plugin</Description>
+                <Author>SSH</Author>
+                <Version>1.19</Version>
+                <Key>1133520312</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>Credits.asc</FileName>
+                <Name>Credits</Name>
+                <Description>Credits script module, to replace the plugin</Description>
+                <Author>SSH</Author>
+                <Version>1.19</Version>
+                <Key>1133520312</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
                 <FileName>TwoClickHandler.ash</FileName>
                 <Name />
                 <Description />
@@ -8735,18 +8780,6 @@ return
                 <SubFolders />
                 <AudioClips>
                   <AudioClip>
-                    <SourceFileName>Music/00_intro/AllCreatures_64kb.ogg</SourceFileName>
-                    <ScriptName>aAllCreatures</ScriptName>
-                    <Index>8</Index>
-                    <Type>2</Type>
-                    <BundlingType>InSeparateVOX</BundlingType>
-                    <FileType>OGG</FileType>
-                    <DefaultVolume>-1</DefaultVolume>
-                    <DefaultPriority>Inherit</DefaultPriority>
-                    <DefaultRepeat>Inherit</DefaultRepeat>
-                    <FileLastModifiedDate>2017-08-12 19:55:30Z</FileLastModifiedDate>
-                  </AudioClip>
-                  <AudioClip>
                     <SourceFileName>Music/00_intro/god-be-with-you-till-we-meet-again.ogg</SourceFileName>
                     <ScriptName>aGodbewithyou</ScriptName>
                     <Index>12</Index>
@@ -8760,7 +8793,7 @@ return
                   </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
-                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultVolume>40</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
                   <DefaultRepeat>Inherit</DefaultRepeat>
                   <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
@@ -9141,9 +9174,22 @@ return
               </AudioClipFolder>
               <AudioClipFolder Name="Hell">
                 <SubFolders />
-                <AudioClips />
+                <AudioClips>
+                  <AudioClip>
+                    <SourceFileName>Sound/12_hell/infomercial.ogg</SourceFileName>
+                    <ScriptName>aInfomercial</ScriptName>
+                    <Index>28</Index>
+                    <Type>3</Type>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-31 04:20:41Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
                 <AudioClipFolder>
-                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultVolume>50</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
                   <DefaultRepeat>Inherit</DefaultRepeat>
                   <DefaultBundlingType>InGameEXE</DefaultBundlingType>
@@ -9267,7 +9313,7 @@ return
   <Component Name="Scripts" />
   <Component Name="SpeechCenter">
     <SpeechCenter Version="2.0.4.0">
-      <Document Version="2.0.0.0" LastRefresh="2017-08-31T03:27:39.7428085Z">
+      <Document Version="2.0.0.0" LastRefresh="2017-08-31T03:39:01.4329177Z">
         <Settings>
           <CustomFunctions />
           <VoiceActorScripts NewParagraph="PER_FUNCTION">

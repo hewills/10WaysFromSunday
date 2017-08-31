@@ -74,7 +74,7 @@
       <SaveGameFileExtension />
       <SaveGameFolderName>10WaysfromSunday</SaveGameFolderName>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <AudioIndexer>27</AudioIndexer>
+      <AudioIndexer>28</AudioIndexer>
       <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
     </Settings>
     <LipSync>
@@ -1890,7 +1890,7 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>300</StartingRoom>
             <StartX>211</StartX>
             <StartY>214</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -4690,7 +4690,28 @@ return
               </SpriteFolder>
               <SpriteFolder Name="Hell">
                 <SubFolders />
-                <Sprites />
+                <Sprites>
+                  <Sprite Slot="212" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio11.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="213" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio12.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="214" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio13.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="215" Width="380" Height="240" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/12_hell/background/hell_studio14.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
               </SpriteFolder>
             </SubFolders>
             <Sprites />
@@ -8678,6 +8699,30 @@ return
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
+                <FileName>Credits.ash</FileName>
+                <Name>Credits</Name>
+                <Description>Credits script module, to replace the plugin</Description>
+                <Author>SSH</Author>
+                <Version>1.19</Version>
+                <Key>1133520312</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>Credits.asc</FileName>
+                <Name>Credits</Name>
+                <Description>Credits script module, to replace the plugin</Description>
+                <Author>SSH</Author>
+                <Version>1.19</Version>
+                <Key>1133520312</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
                 <FileName>TwoClickHandler.ash</FileName>
                 <Name />
                 <Description />
@@ -8735,18 +8780,6 @@ return
                 <SubFolders />
                 <AudioClips>
                   <AudioClip>
-                    <SourceFileName>Music/00_intro/AllCreatures_64kb.ogg</SourceFileName>
-                    <ScriptName>aAllCreatures</ScriptName>
-                    <Index>8</Index>
-                    <Type>2</Type>
-                    <BundlingType>InSeparateVOX</BundlingType>
-                    <FileType>OGG</FileType>
-                    <DefaultVolume>-1</DefaultVolume>
-                    <DefaultPriority>Inherit</DefaultPriority>
-                    <DefaultRepeat>Inherit</DefaultRepeat>
-                    <FileLastModifiedDate>2017-08-12 19:55:30Z</FileLastModifiedDate>
-                  </AudioClip>
-                  <AudioClip>
                     <SourceFileName>Music/00_intro/god-be-with-you-till-we-meet-again.ogg</SourceFileName>
                     <ScriptName>aGodbewithyou</ScriptName>
                     <Index>12</Index>
@@ -8760,7 +8793,7 @@ return
                   </AudioClip>
                 </AudioClips>
                 <AudioClipFolder>
-                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultVolume>40</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
                   <DefaultRepeat>Inherit</DefaultRepeat>
                   <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
@@ -9141,9 +9174,22 @@ return
               </AudioClipFolder>
               <AudioClipFolder Name="Hell">
                 <SubFolders />
-                <AudioClips />
+                <AudioClips>
+                  <AudioClip>
+                    <SourceFileName>Sound/12_hell/infomercial.ogg</SourceFileName>
+                    <ScriptName>aInfomercial</ScriptName>
+                    <Index>28</Index>
+                    <Type>3</Type>
+                    <BundlingType>InGameEXE</BundlingType>
+                    <FileType>OGG</FileType>
+                    <DefaultVolume>-1</DefaultVolume>
+                    <DefaultPriority>Inherit</DefaultPriority>
+                    <DefaultRepeat>Inherit</DefaultRepeat>
+                    <FileLastModifiedDate>2017-08-31 04:20:41Z</FileLastModifiedDate>
+                  </AudioClip>
+                </AudioClips>
                 <AudioClipFolder>
-                  <DefaultVolume>100</DefaultVolume>
+                  <DefaultVolume>50</DefaultVolume>
                   <DefaultPriority>Inherit</DefaultPriority>
                   <DefaultRepeat>Inherit</DefaultRepeat>
                   <DefaultBundlingType>InGameEXE</DefaultBundlingType>
@@ -9267,7 +9313,7 @@ return
   <Component Name="Scripts" />
   <Component Name="SpeechCenter">
     <SpeechCenter Version="2.0.4.0">
-      <Document Version="2.0.0.0" LastRefresh="2017-08-31T03:16:45.8867624Z">
+      <Document Version="2.0.0.0" LastRefresh="2017-08-31T03:39:01.4329177Z">
         <Settings>
           <CustomFunctions />
           <VoiceActorScripts NewParagraph="PER_FUNCTION">
@@ -9289,6 +9335,7 @@ return
         </Settings>
         <SpeechLines>
           <Speech CharacterID="0" FileNum="1">
+            <File Status="NOT_READ" DateModified="2017-08-31T10:13:49.8298817Z" Size="17790" Type="OGG" Checksum="0" />
             <ScriptLines>
               <ScriptLine Text="" OriginalText="&amp;1 Timothy!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="41" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
               <ScriptLine Text="" OriginalText="&amp;1 Timothy! Wha..?" Location="room301.asc" Function="room_AfterFadeIn" LineNum="28" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
@@ -9354,62 +9401,62 @@ return
               <ScriptLine Text="" OriginalText="&amp;5 Where am I?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="48" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="Meh. Nothing special." Location="GlobalScript.asc" Function="unhandled_event" LineNum="334" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.0.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="I can't do anything with it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="338" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.0.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="I have no reason to do that." Location="GlobalScript.asc" Function="unhandled_event" LineNum="342" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.0.2" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="Looks like a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="349" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.1.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="I don't want it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="353" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.1.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="I have no reason to do that." Location="GlobalScript.asc" Function="unhandled_event" LineNum="357" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.1.2" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="Another one of God's children." Location="GlobalScript.asc" Function="unhandled_event" LineNum="364" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.2.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="I don't have anything to say." Location="GlobalScript.asc" Function="unhandled_event" LineNum="368" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.2.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="I don't think I should give that away." Location="GlobalScript.asc" Function="unhandled_event" LineNum="372" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.2.2" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="Just stuff in my pocket." Location="GlobalScript.asc" Function="unhandled_event" LineNum="379" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.3.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="Um, no?" Location="GlobalScript.asc" Function="unhandled_event" LineNum="383" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.3.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000">
+          <Speech CharacterID="0">
             <ScriptLines>
               <ScriptLine Text="" OriginalText="That's ridiculous." Location="GlobalScript.asc" Function="unhandled_event" LineNum="387" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.3.2" />
             </ScriptLines>
@@ -10406,7 +10453,7 @@ return
           </Speech>
           <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="I'll program their location in my GPS." Location="room5.asc" Function="hPoster_Look" LineNum="109" Type="ROOM" SpeechFunction="Say" BlockNumber="5.1" />
+              <ScriptLine Text="" OriginalText="I'll program their location in my GPS." Location="room5.asc" Function="hPoster_Look" LineNum="109" Type="ROOM" SpeechFunction="Say" BlockNumber="5.0" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0">
