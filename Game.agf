@@ -678,12 +678,16 @@
             <Description>bar</Description>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Number>11</Number>
+            <Number>15</Number>
             <Description>heaven</Description>
           </UnloadedRoom>
           <UnloadedRoom>
             <Number>12</Number>
             <Description>hell</Description>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>11</Number>
+            <Description>throwaway</Description>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -1886,9 +1890,9 @@
             <IdleView>1</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
-            <StartingRoom>300</StartingRoom>
-            <StartX>352</StartX>
-            <StartY>224</StartY>
+            <StartingRoom>1</StartingRoom>
+            <StartX>211</StartX>
+            <StartY>214</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>11</MovementSpeed>
             <MovementSpeedX>3</MovementSpeedX>
@@ -2349,6 +2353,46 @@
             <Interactions>
               <Event Index="0">cBob_Look</Event>
               <Event Index="1">cBob_Interact</Event>
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>12</ID>
+            <ScriptName>cGod</ScriptName>
+            <RealName>God</RealName>
+            <NormalView>33</NormalView>
+            <SpeechView>34</SpeechView>
+            <IdleView>33</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>15</StartingRoom>
+            <StartX>265</StartX>
+            <StartY>200</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65504</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
               <Event Index="2" />
               <Event Index="3" />
               <Event Index="4" />
@@ -3060,11 +3104,17 @@ return
 @1
 Bob: Are you okay?
 Debra: Never better!
+  Wait(30);
+  updateList(10);
+  showList();
 stop
 @2
 Bob: What?
 Debra: See ya!
 Bob: Okay, see you tommorrow!
+  Wait(30);
+  updateList(10);
+  showList();
 stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
@@ -3080,6 +3130,31 @@ stop]]></Script>
                     <Say>True</Say>
                   </DialogOption>
                 </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+          <DialogFolder Name="Heaven">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>16</ID>
+                <Name>dHeaven1</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+]]></Script>
+                <DialogOptions />
+              </Dialog>
+              <Dialog>
+                <ID>17</ID>
+                <Name>dHeaven2</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+]]></Script>
+                <DialogOptions />
               </Dialog>
             </Dialogs>
           </DialogFolder>
@@ -4478,6 +4553,36 @@ stop]]></Script>
                   <Sprite Slot="206" Width="18" Height="27" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
                     <Source>
                       <FileName>Images/03_studio_inside/sprites/Bob4.png</FileName>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="God">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="207" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/11_heaven/sprites/God.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="208" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/11_heaven/sprites/God1.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="209" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/11_heaven/sprites/God2.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="210" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/11_heaven/sprites/God3.png</FileName>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="211" Width="40" Height="95" ColorDepth="16" Resolution="LowRes" AlphaChannel="False">
+                    <Source>
+                      <FileName>Images/11_heaven/sprites/God4.png</FileName>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -7062,6 +7167,86 @@ stop]]></Script>
                   </Loop>
                 </Loops>
               </View>
+              <View>
+                <ID>35</ID>
+                <Name>Satan_talk_right</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>172</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>174</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>173</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>175</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>176</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>174</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>173</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>36</ID>
+                <Name>Satan_idle_right</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>173</Image>
+                        <Flipped>True</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
             </Views>
           </ViewFolder>
           <ViewFolder Name="Poof">
@@ -7646,6 +7831,136 @@ stop]]></Script>
                     <ID>3</ID>
                     <RunNextLoop>False</RunNextLoop>
                     <Frames />
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="heaven">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>33</ID>
+                <Name>God_Idle</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>207</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>34</ID>
+                <Name>God_Talk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <ID>0</ID>
+                        <Image>208</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>1</ID>
+                        <Image>209</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>2</ID>
+                        <Image>210</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>3</ID>
+                        <Image>211</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>4</ID>
+                        <Image>208</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>5</ID>
+                        <Image>209</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>6</ID>
+                        <Image>211</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>7</ID>
+                        <Image>210</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <ID>8</ID>
+                        <Image>207</Image>
+                        <Flipped>False</Flipped>
+                        <Delay>0</Delay>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
                   </Loop>
                 </Loops>
               </View>
@@ -8952,7 +9267,7 @@ stop]]></Script>
   <Component Name="Scripts" />
   <Component Name="SpeechCenter">
     <SpeechCenter Version="2.0.4.0">
-      <Document Version="2.0.0.0" LastRefresh="2017-08-13T03:38:10.7151652Z">
+      <Document Version="2.0.0.0" LastRefresh="2017-08-31T03:27:39.7428085Z">
         <Settings>
           <CustomFunctions />
           <VoiceActorScripts NewParagraph="PER_FUNCTION">
@@ -8974,134 +9289,2155 @@ stop]]></Script>
         </Settings>
         <SpeechLines>
           <Speech CharacterID="0" FileNum="1">
-            <File Status="NOT_READ" DateModified="2017-08-13T09:47:12.6158455Z" Size="9730" Type="OGG" Checksum="0" />
+            <File Status="NOT_READ" DateModified="2017-08-31T10:13:49.8298817Z" Size="17790" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;1 Timothy!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="44" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;1 Timothy!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="41" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;1 Timothy! Wha..?" Location="room301.asc" Function="room_AfterFadeIn" LineNum="28" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0" FileNum="2">
-            <File Status="NOT_READ" DateModified="2017-08-13T09:47:41.2877905Z" Size="16709" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;2 Timothy, where are you?!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="45" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;2 Timothy, where are you?!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="42" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0" FileNum="3">
-            <File Status="NOT_READ" DateModified="2017-08-13T09:48:09.6761717Z" Size="12182" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;3 I can't see you!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="55" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;3 I can't see you!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="52" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0" FileNum="4">
-            <File Status="NOT_READ" DateModified="2017-08-13T10:34:37.1244128Z" Size="10199" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;4 HELLO?!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="56" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;4 HELLO?!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="53" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0" FileNum="5">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;5 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="57" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
-              <ScriptLine Text="" OriginalText="&amp;5 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="59" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;5 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="54" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;5 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="56" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0" FileNum="6">
-            <File Status="NOT_READ" DateModified="2017-08-13T10:35:08.9977572Z" Size="18612" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;6 TIMOTHY!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="58" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;6 TIMOTHY!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="55" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="0" FileNum="7">
-            <File Status="NOT_READ" DateModified="2017-08-13T10:36:20.1442087Z" Size="15216" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;7 TIM...!!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="60" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;7 TIM...!!" Location="room300.asc" Function="room_AfterFadeIn" LineNum="57" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="1" FileNum="1">
             <File Status="NOT_READ" DateModified="2017-08-13T10:36:46.3434022Z" Size="11066" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;1 Hello?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="38" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;1 Hello?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="35" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="1" FileNum="2">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;2 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="39" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;2 ..." Location="room300.asc" Function="room_AfterFadeIn" LineNum="36" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="1" FileNum="3">
             <File Status="NOT_READ" DateModified="2017-08-13T10:37:07.943718Z" Size="9227" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;3 Debra?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="40" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;3 Debra?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="37" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="1" FileNum="4">
             <File Status="NOT_READ" DateModified="2017-08-13T10:37:33.8238562Z" Size="17793" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;4 What is this place?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="50" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;4 What is this place?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="47" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
           <Speech CharacterID="1" FileNum="5">
             <File Status="NOT_READ" DateModified="2017-08-13T10:37:56.2531495Z" Size="14096" Type="OGG" Checksum="0" />
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;5 Where am I?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="51" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+              <ScriptLine Text="" OriginalText="&amp;5 Where am I?" Location="room300.asc" Function="room_AfterFadeIn" LineNum="48" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="1">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;1 Meh. Nothing special." Location="GlobalScript.asc" Function="unhandled_event" LineNum="65" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.0" />
+              <ScriptLine Text="" OriginalText="Meh. Nothing special." Location="GlobalScript.asc" Function="unhandled_event" LineNum="334" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.0.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="2">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;2 I can't do anything with it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="69" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.1" />
+              <ScriptLine Text="" OriginalText="I can't do anything with it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="338" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.0.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="3">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;3 That won't do a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="73" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.0.2" />
+              <ScriptLine Text="" OriginalText="I have no reason to do that." Location="GlobalScript.asc" Function="unhandled_event" LineNum="342" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.0.2" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="4">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;4 Looks like a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="80" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.0" />
+              <ScriptLine Text="" OriginalText="Looks like a thing." Location="GlobalScript.asc" Function="unhandled_event" LineNum="349" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.1.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="5">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;5 I don't want it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="84" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.1" />
+              <ScriptLine Text="" OriginalText="I don't want it." Location="GlobalScript.asc" Function="unhandled_event" LineNum="353" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.1.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="6">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;6 That's a silly thing to do." Location="GlobalScript.asc" Function="unhandled_event" LineNum="88" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.1.2" />
+              <ScriptLine Text="" OriginalText="I have no reason to do that." Location="GlobalScript.asc" Function="unhandled_event" LineNum="357" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.1.2" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="7">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;7 Another one of God's children." Location="GlobalScript.asc" Function="unhandled_event" LineNum="95" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.0" />
+              <ScriptLine Text="" OriginalText="Another one of God's children." Location="GlobalScript.asc" Function="unhandled_event" LineNum="364" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.2.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="8">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;8 I don't have anything to say." Location="GlobalScript.asc" Function="unhandled_event" LineNum="99" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.1" />
+              <ScriptLine Text="" OriginalText="I don't have anything to say." Location="GlobalScript.asc" Function="unhandled_event" LineNum="368" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.2.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="9">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;9 I don't think I should give that away." Location="GlobalScript.asc" Function="unhandled_event" LineNum="103" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.2.2" />
+              <ScriptLine Text="" OriginalText="I don't think I should give that away." Location="GlobalScript.asc" Function="unhandled_event" LineNum="372" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.2.2" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="10">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;10 Just stuff in my pocket." Location="GlobalScript.asc" Function="unhandled_event" LineNum="110" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.0" />
+              <ScriptLine Text="" OriginalText="Just stuff in my pocket." Location="GlobalScript.asc" Function="unhandled_event" LineNum="379" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.3.0" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="11">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;11 Um, no?" Location="GlobalScript.asc" Function="unhandled_event" LineNum="114" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.1" />
+              <ScriptLine Text="" OriginalText="Um, no?" Location="GlobalScript.asc" Function="unhandled_event" LineNum="383" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.3.1" />
             </ScriptLines>
           </Speech>
-          <Speech CharacterID="1000" FileNum="12">
+          <Speech CharacterID="0">
             <ScriptLines>
-              <ScriptLine Text="" OriginalText="&amp;12 That's ridiculous." Location="GlobalScript.asc" Function="unhandled_event" LineNum="118" Type="GLOBAL" SpeechFunction="Say" BlockNumber="6.3.2" />
+              <ScriptLine Text="" OriginalText="That's ridiculous." Location="GlobalScript.asc" Function="unhandled_event" LineNum="387" Type="GLOBAL" SpeechFunction="Say" BlockNumber="25.3.2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="#1 says I need to find another god to worship." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="513" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="For #2, building a representation of God shouldn't be too hard." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="516" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="To make #3 count, I need to say the Lord's name on a greater scale." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="519" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="#4 says do something unholy on Sunday? Shouldn't be a problem." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="522" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="#5. Hmm. My parents ARE on speed dial." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="525" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I was hoping God would show up before #6. I don't know if I can do this." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="528" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Yikes! I guess step one for #7 is finding someone married." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="531" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="#8 is basically stealing something that isn't mine." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="534" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="#9 means I need to tell a lie, and plant some evidence." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="537" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.1.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="#10 is all about coveting my neighbor. Easy peasy." Location="GlobalScript.asc" Function="gList_OnClick" LineNum="540" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.1.1.1.1.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hmm" Location="GlobalScript.asc" Function="gList_OnClick" LineNum="542" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="36.1.1.1.1.1.1.1.1.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A bottle of Draino. 'Do not get in eyes. Do not consume.'" Location="GlobalScript.asc" Function="iDraino_Look" LineNum="617" Type="GLOBAL" SpeechFunction="Say" BlockNumber="41" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My black magic marker." Location="GlobalScript.asc" Function="iMarker_Look" LineNum="622" Type="GLOBAL" SpeechFunction="Say" BlockNumber="42" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's organ sheet music. It's called 'Toccata', and has a lot of bass notes." Location="GlobalScript.asc" Function="iMusic_Look" LineNum="627" Type="GLOBAL" SpeechFunction="Say" BlockNumber="43" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A pair of scissors." Location="GlobalScript.asc" Function="iScissors_Look" LineNum="632" Type="GLOBAL" SpeechFunction="Say" BlockNumber="44" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A man's gold wedding ring." Location="GlobalScript.asc" Function="iRing_Look" LineNum="637" Type="GLOBAL" SpeechFunction="Say" BlockNumber="45" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi dear, it's so nice to have you calling." Location="GlobalScript.asc" Function="gPhone_OnClick" LineNum="661" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="47.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="7">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh is that Debra? Hi Honey." Location="GlobalScript.asc" Function="gPhone_OnClick" LineNum="662" Type="GLOBAL" SpeechFunction="SayAt" BlockNumber="47.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi Mom. Hi Dad." Location="GlobalScript.asc" Function="gPhone_OnClick" LineNum="663" Type="GLOBAL" SpeechFunction="Say" BlockNumber="47.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need to call anyone." Location="GlobalScript.asc" Function="gPhone_OnClick" LineNum="667" Type="GLOBAL" SpeechFunction="Say" BlockNumber="47.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Pieces of wood." Location="GlobalScript.asc" Function="iWood_Look" LineNum="679" Type="GLOBAL" SpeechFunction="Say" BlockNumber="49" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A blank piece of paper." Location="GlobalScript.asc" Function="iPaper_Look" LineNum="684" Type="GLOBAL" SpeechFunction="Say" BlockNumber="50" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A handful of metal nails." Location="GlobalScript.asc" Function="iNails_Look" LineNum="689" Type="GLOBAL" SpeechFunction="Say" BlockNumber="51" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Ten bucks!" Location="GlobalScript.asc" Function="iMoney_Look" LineNum="694" Type="GLOBAL" SpeechFunction="Say" BlockNumber="52" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's Susan the receptionist." Location="GlobalScript.asc" Function="cSusan_Look" LineNum="701" Type="GLOBAL" SpeechFunction="Say" BlockNumber="53" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Who are you talking to?" Location="GlobalScript.asc" Function="cSusan_Look" LineNum="702" Type="GLOBAL" SpeechFunction="Say" BlockNumber="53" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="She looks busy. I don't want to bother her." Location="GlobalScript.asc" Function="cSusan_Interact" LineNum="716" Type="GLOBAL" SpeechFunction="Say" BlockNumber="54.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll make a frame!" Location="GlobalScript.asc" Function="iWood_UseInv" LineNum="727" Type="GLOBAL" SpeechFunction="Say" BlockNumber="55.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Now I just need something I can draw on." Location="GlobalScript.asc" Function="iWood_UseInv" LineNum="728" Type="GLOBAL" SpeechFunction="Say" BlockNumber="55.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have no reason to mess with this now." Location="GlobalScript.asc" Function="iWood_UseInv" LineNum="733" Type="GLOBAL" SpeechFunction="Say" BlockNumber="55.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll make a frame!" Location="GlobalScript.asc" Function="iNails_UseInv" LineNum="741" Type="GLOBAL" SpeechFunction="Say" BlockNumber="56.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Now I just need something I can draw on." Location="GlobalScript.asc" Function="iNails_UseInv" LineNum="742" Type="GLOBAL" SpeechFunction="Say" BlockNumber="56.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have no reason to mess with this now." Location="GlobalScript.asc" Function="iNails_UseInv" LineNum="747" Type="GLOBAL" SpeechFunction="Say" BlockNumber="56.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This paper fits perfectly in my frame." Location="GlobalScript.asc" Function="iFrame_UseInv" LineNum="754" Type="GLOBAL" SpeechFunction="Say" BlockNumber="57.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My graven image is almost done." Location="GlobalScript.asc" Function="iFrame_UseInv" LineNum="755" Type="GLOBAL" SpeechFunction="Say" BlockNumber="57.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hmm. This requires a better surface." Location="GlobalScript.asc" Function="iFrame_UseInv" LineNum="762" Type="GLOBAL" SpeechFunction="Say" BlockNumber="57.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I should use my craft table." Location="GlobalScript.asc" Function="iFrame_UseInv" LineNum="763" Type="GLOBAL" SpeechFunction="Say" BlockNumber="57.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's silly." Location="GlobalScript.asc" Function="iFrame_UseInv" LineNum="766" Type="GLOBAL" SpeechFunction="Say" BlockNumber="57.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This paper fits perfectly in my frame." Location="GlobalScript.asc" Function="iPaper_UseInv" LineNum="774" Type="GLOBAL" SpeechFunction="Say" BlockNumber="58.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My graven image is almost done." Location="GlobalScript.asc" Function="iPaper_UseInv" LineNum="775" Type="GLOBAL" SpeechFunction="Say" BlockNumber="58.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's silly." Location="GlobalScript.asc" Function="iPaper_UseInv" LineNum="779" Type="GLOBAL" SpeechFunction="Say" BlockNumber="58.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My self-made frame of wood." Location="GlobalScript.asc" Function="iFrame_Look" LineNum="784" Type="GLOBAL" SpeechFunction="Say" BlockNumber="59" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That teen smoking, looks like trouble." Location="GlobalScript.asc" Function="cTeen_Look" LineNum="794" Type="GLOBAL" SpeechFunction="Say" BlockNumber="60" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Your FACE is trouble." Location="GlobalScript.asc" Function="cTeen_Look" LineNum="795" Type="GLOBAL" SpeechFunction="Say" BlockNumber="60" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Thanks" Location="GlobalScript.asc" Function="cTeen_UseInv" LineNum="813" Type="GLOBAL" SpeechFunction="Say" BlockNumber="62.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll make sure the alarm goes off, so you can do your 'thing'." Location="GlobalScript.asc" Function="cTeen_UseInv" LineNum="814" Type="GLOBAL" SpeechFunction="Say" BlockNumber="62.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Weirdo." Location="GlobalScript.asc" Function="cTeen_UseInv" LineNum="815" Type="GLOBAL" SpeechFunction="Say" BlockNumber="62.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Why would I give away my stuff for no reason?" Location="GlobalScript.asc" Function="cTeen_UseInv" LineNum="819" Type="GLOBAL" SpeechFunction="Say" BlockNumber="62.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I wonder if she gets to see movies for free." Location="GlobalScript.asc" Function="cCashier_Look" LineNum="826" Type="GLOBAL" SpeechFunction="Say" BlockNumber="63" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I do!" Location="GlobalScript.asc" Function="cCashier_Look" LineNum="827" Type="GLOBAL" SpeechFunction="Say" BlockNumber="63" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't have time for anymore movies." Location="GlobalScript.asc" Function="cCashier_Interact" LineNum="839" Type="GLOBAL" SpeechFunction="Say" BlockNumber="64.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The bartender doesn't seem happy to see me." Location="GlobalScript.asc" Function="cBar_Look" LineNum="848" Type="GLOBAL" SpeechFunction="Say" BlockNumber="65" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Nice suit!" Location="GlobalScript.asc" Function="cSkip_Look" LineNum="861" Type="GLOBAL" SpeechFunction="Say" BlockNumber="67" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="He seems nice. And he has a ring on his finger." Location="GlobalScript.asc" Function="cSkip_Look" LineNum="865" Type="GLOBAL" SpeechFunction="Say" BlockNumber="67.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hello!" Location="GlobalScript.asc" Function="cSkip_Interact" LineNum="888" Type="GLOBAL" SpeechFunction="Say" BlockNumber="69.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi!" Location="GlobalScript.asc" Function="cSkip_Interact" LineNum="889" Type="GLOBAL" SpeechFunction="Say" BlockNumber="69.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I better make sure he's married first." Location="GlobalScript.asc" Function="cSkip_Interact" LineNum="894" Type="GLOBAL" SpeechFunction="Say" BlockNumber="69.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's my neighbor Bob." Location="GlobalScript.asc" Function="cBob_Look" LineNum="907" Type="GLOBAL" SpeechFunction="Say" BlockNumber="70" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I keep dreaming of Timothy." Location="room1.asc" Function="room_FirstLoad" LineNum="59" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Ever since his passing, he won't leave my dreams." Location="room1.asc" Function="room_FirstLoad" LineNum="60" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Something is wrong." Location="room1.asc" Function="room_FirstLoad" LineNum="61" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="His soul is lost. And I pray, but get no answers." Location="room1.asc" Function="room_FirstLoad" LineNum="62" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I need to get God's attention." Location="room1.asc" Function="room_FirstLoad" LineNum="63" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="But how?" Location="room1.asc" Function="room_FirstLoad" LineNum="64" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Maybe this week's Bible study guide will inspire me." Location="room1.asc" Function="room_FirstLoad" LineNum="65" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="TO PLAY:  Left-click to Interact. Right-click to Look" Location="room1.asc" Function="room_FirstLoad" LineNum="69" Type="ROOM" SpeechFunction="Display" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A few postings from church members." Location="room1.asc" Function="hBoard_Look" LineNum="82" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need any postings." Location="room1.asc" Function="hBoard_Interact" LineNum="87" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The door into the sanctuary." Location="room1.asc" Function="hSanctuary_Look" LineNum="93" Type="ROOM" SpeechFunction="Say" BlockNumber="6" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't want to return to the service. I'll just have another dream about Timothy." Location="room1.asc" Function="hSanctuary_Interact" LineNum="99" Type="ROOM" SpeechFunction="Say" BlockNumber="7.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I can see the congregation singing." Location="room1.asc" Function="hWindow_Look" LineNum="109" Type="ROOM" SpeechFunction="Say" BlockNumber="8.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I can see the sanctuary in there." Location="room1.asc" Function="hWindow_Look" LineNum="112" Type="ROOM" SpeechFunction="Say" BlockNumber="8.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The window doesn't open." Location="room1.asc" Function="hWindow_Interact" LineNum="117" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the utility closet." Location="room1.asc" Function="hCloset_Look" LineNum="122" Type="ROOM" SpeechFunction="Say" BlockNumber="10" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The closet is locked." Location="room1.asc" Function="hCloset_Interact" LineNum="128" Type="ROOM" SpeechFunction="Say" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The custodian must have been here." Location="room1.asc" Function="hCloset_Interact" LineNum="130" Type="ROOM" SpeechFunction="Say" BlockNumber="11.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the exit." Location="room1.asc" Function="hExit_Look" LineNum="135" Type="ROOM" SpeechFunction="Say" BlockNumber="12" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the pile of study guides." Location="room1.asc" Function="hTract_Look" LineNum="140" Type="ROOM" SpeechFunction="Say" BlockNumber="13" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I already have one." Location="room1.asc" Function="hTract_Interact" LineNum="148" Type="ROOM" SpeechFunction="Say" BlockNumber="14.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll grab a study guide." Location="room1.asc" Function="hTract_Interact" LineNum="152" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This weeks guide is on the ten commandments." Location="room1.asc" Function="hTract_Interact" LineNum="157" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I've tried my best to follow these every since I was a little." Location="room1.asc" Function="hTract_Interact" LineNum="158" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's it!" Location="room1.asc" Function="hTract_Interact" LineNum="159" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's how I'll get God's attention." Location="room1.asc" Function="hTract_Interact" LineNum="160" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="If He sees me breaking each one of His commandments, one by one, in order..." Location="room1.asc" Function="hTract_Interact" LineNum="161" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="He'll for sure look my way." Location="room1.asc" Function="hTract_Interact" LineNum="162" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="And probably pretty quickly." Location="room1.asc" Function="hTract_Interact" LineNum="163" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I need to help Timothy." Location="room1.asc" Function="hTract_Interact" LineNum="164" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="And God could save him." Location="room1.asc" Function="hTract_Interact" LineNum="165" Type="ROOM" SpeechFunction="Say" BlockNumber="14.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I want a study guide before I go." Location="room1.asc" Function="hExit_Interact" LineNum="175" Type="ROOM" SpeechFunction="Say" BlockNumber="15.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the custodian's mop." Location="room1.asc" Function="hMop_Look" LineNum="187" Type="ROOM" SpeechFunction="Say" BlockNumber="16" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's a box of sheet music and old church bulletins." Location="room1.asc" Function="hBox_Look" LineNum="193" Type="ROOM" SpeechFunction="Say" BlockNumber="17" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll take this sheet music with a lot of bass." Location="room1.asc" Function="hBox_Interact" LineNum="200" Type="ROOM" SpeechFunction="Say" BlockNumber="18.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have no need for sheetmusic or old bulletins." Location="room1.asc" Function="hBox_Interact" LineNum="204" Type="ROOM" SpeechFunction="Say" BlockNumber="18.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="There's nothing else I need in here." Location="room1.asc" Function="hBox_Interact" LineNum="207" Type="ROOM" SpeechFunction="Say" BlockNumber="18.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A bottle of industrial-strength Draino." Location="room1.asc" Function="oDraino_Look" LineNum="215" Type="ROOM" SpeechFunction="Say" BlockNumber="19" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'm sure the custodian won't mind me borrowing it." Location="room1.asc" Function="oDraino_Interact" LineNum="220" Type="ROOM" SpeechFunction="Say" BlockNumber="20" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I hate clogged drains." Location="room1.asc" Function="oDraino_Interact" LineNum="221" Type="ROOM" SpeechFunction="Say" BlockNumber="20" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The lower notes cause it to rattle." Location="room2.asc" Function="oOrgan_Look" LineNum="57" Type="ROOM" SpeechFunction="Say" BlockNumber="2.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Good thing he's not playing a more bass-heavy tune." Location="room2.asc" Function="oOrgan_Look" LineNum="58" Type="ROOM" SpeechFunction="Say" BlockNumber="2.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Fancy organ has fancy decoration pieces." Location="room2.asc" Function="oOrgan_Look" LineNum="62" Type="ROOM" SpeechFunction="Say" BlockNumber="2.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Extra wood, leftover from building new pews." Location="room2.asc" Function="oWood_Look" LineNum="68" Type="ROOM" SpeechFunction="Say" BlockNumber="3" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Box of nails." Location="room2.asc" Function="oNails_Look" LineNum="73" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Empty bucket." Location="room2.asc" Function="oBucket_Look" LineNum="78" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The pastor's podium." Location="room2.asc" Function="hPodium_Look" LineNum="88" Type="ROOM" SpeechFunction="Say" BlockNumber="7" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have no declarations to make." Location="room2.asc" Function="hPodium_Interact" LineNum="93" Type="ROOM" SpeechFunction="Say" BlockNumber="8" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I think it's supposed to be abstract angels." Location="room2.asc" Function="hGlass_Look" LineNum="98" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The church's beautiful pipe organ. It sounds amazing." Location="room2.asc" Function="hOrgan_Look" LineNum="103" Type="ROOM" SpeechFunction="Say" BlockNumber="10" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The organ is taken right now." Location="room2.asc" Function="hOrgan_Interact" LineNum="109" Type="ROOM" SpeechFunction="Say" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I only know one little piece of music..." Location="room2.asc" Function="hOrgan_Interact" LineNum="113" Type="ROOM" SpeechFunction="Say" BlockNumber="11.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Spooky." Location="room2.asc" Function="hOrgan_Interact" LineNum="116" Type="ROOM" SpeechFunction="Say" BlockNumber="11.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I might need this wood." Location="room2.asc" Function="oWood_Interact" LineNum="125" Type="ROOM" SpeechFunction="Say" BlockNumber="12.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't think I need it." Location="room2.asc" Function="oBucket_Interact" LineNum="133" Type="ROOM" SpeechFunction="Say" BlockNumber="13" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I might need nails." Location="room2.asc" Function="oNails_Interact" LineNum="141" Type="ROOM" SpeechFunction="Say" BlockNumber="14.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the church organist. He seems pretty engrossed." Location="room2.asc" Function="oOrganist_Look" LineNum="150" Type="ROOM" SpeechFunction="Say" BlockNumber="15.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The wind was knocked out of him. And then some." Location="room2.asc" Function="oOrganist_Look" LineNum="153" Type="ROOM" SpeechFunction="Say" BlockNumber="15.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sorry to bother you, but why don't you try this piece?" Location="room2.asc" Function="oOrganist_UseInv" LineNum="163" Type="ROOM" SpeechFunction="Say" BlockNumber="16.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Okay." Location="room2.asc" Function="oOrganist_UseInv" LineNum="165" Type="ROOM" SpeechFunction="SayAt" BlockNumber="16.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Damn." Location="room2.asc" Function="oOrganist_UseInv" LineNum="195" Type="ROOM" SpeechFunction="Say" BlockNumber="16.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll place Skip's wedding ring on top." Location="room2.asc" Function="hOrgan_UseInv" LineNum="208" Type="ROOM" SpeechFunction="Say" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I hope he doesn't expect breakfast." Location="room3.asc" Function="room_AfterFadeIn" LineNum="36" Type="ROOM" SpeechFunction="Say" BlockNumber="1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What's going on?" Location="room3.asc" Function="room_AfterFadeIn" LineNum="48" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="SURPRISE!" Location="room3.asc" Function="room_AfterFadeIn" LineNum="53" Type="ROOM" SpeechFunction="SayAt" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Finally! It's God! And just in time!" Location="room3.asc" Function="room_AfterFadeIn" LineNum="55" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh..no." Location="room3.asc" Function="room_AfterFadeIn" LineNum="62" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Okay, Okay, you got my attention." Location="room3.asc" Function="room_AfterFadeIn" LineNum="64" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Yeeaaah." Location="room3.asc" Function="room_AfterFadeIn" LineNum="65" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Wait..." Location="room3.asc" Function="room_AfterFadeIn" LineNum="67" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Were you trying to God's attention?" Location="room3.asc" Function="room_AfterFadeIn" LineNum="69" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="HAHAHAHAHA!!" Location="room3.asc" Function="room_AfterFadeIn" LineNum="70" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's hilarious!" Location="room3.asc" Function="room_AfterFadeIn" LineNum="71" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What were you thinking exactly?" Location="room3.asc" Function="room_AfterFadeIn" LineNum="72" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I was thinking I need to save my love Timothy." Location="room3.asc" Function="room_AfterFadeIn" LineNum="74" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="He's lost." Location="room3.asc" Function="room_AfterFadeIn" LineNum="75" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Do you know where he is?" Location="room3.asc" Function="room_AfterFadeIn" LineNum="76" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't know where he is. I don't keep tabs on every soul." Location="room3.asc" Function="room_AfterFadeIn" LineNum="78" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="God was supposed to come, so I could ask him for help." Location="room3.asc" Function="room_AfterFadeIn" LineNum="80" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Shut up for a second." Location="room3.asc" Function="room_AfterFadeIn" LineNum="82" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I was going to turn you into a worm, but I kinda like where this is going." Location="room3.asc" Function="room_AfterFadeIn" LineNum="83" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll tell you what? You finish up the 10, and I'll take you to God personally." Location="room3.asc" Function="room_AfterFadeIn" LineNum="84" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Promise?" Location="room3.asc" Function="room_AfterFadeIn" LineNum="86" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sure." Location="room3.asc" Function="room_AfterFadeIn" LineNum="87" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Okay. I don't know what else to do." Location="room3.asc" Function="room_AfterFadeIn" LineNum="89" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You're welcome." Location="room3.asc" Function="room_AfterFadeIn" LineNum="90" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="8">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="HEE HAHA HEEHee HAHAHA!" Location="room3.asc" Function="room_AfterFadeIn" LineNum="91" Type="ROOM" SpeechFunction="Say" BlockNumber="1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My pretty kitty Samantha." Location="room3.asc" Function="Cat_Look" LineNum="106" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="She doesn't like to be picked up, unless it's her idea." Location="room3.asc" Function="Cat_Interact" LineNum="111" Type="ROOM" SpeechFunction="Say" BlockNumber="3" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Samantha wouldn't appreciate that." Location="room3.asc" Function="Cat_UseInv" LineNum="116" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the exit." Location="room3.asc" Function="hDoor_Look" LineNum="121" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have a chance to break the 8th." Location="room3.asc" Function="hDoor_Interact" LineNum="127" Type="ROOM" SpeechFunction="Say" BlockNumber="6.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I should take advantage of that, before leaving." Location="room3.asc" Function="hDoor_Interact" LineNum="128" Type="ROOM" SpeechFunction="Say" BlockNumber="6.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's my art table with easel. I use it for painting and drawing." Location="room3.asc" Function="hTable_Look" LineNum="137" Type="ROOM" SpeechFunction="Say" BlockNumber="7" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My cellphone is in the drawer. I'll grab it." Location="room3.asc" Function="hTable_Interact" LineNum="144" Type="ROOM" SpeechFunction="Say" BlockNumber="8.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My artist table is empty." Location="room3.asc" Function="hTable_Interact" LineNum="148" Type="ROOM" SpeechFunction="Say" BlockNumber="8.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My futon doubles as a bed." Location="room3.asc" Function="hBed_Look" LineNum="154" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Skip is still asleep. I hope he leaves soon." Location="room3.asc" Function="hBed_Look" LineNum="158" Type="ROOM" SpeechFunction="Say" BlockNumber="9.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="He took his ring off last night." Location="room3.asc" Function="hBed_Look" LineNum="159" Type="ROOM" SpeechFunction="Say" BlockNumber="9.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need to sleep." Location="room3.asc" Function="hBed_Interact" LineNum="165" Type="ROOM" SpeechFunction="Say" BlockNumber="10" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I painted this one weekend. I used my easel on the artists table." Location="room3.asc" Function="hArt_Look" LineNum="171" Type="ROOM" SpeechFunction="Say" BlockNumber="11" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My clock is right two times a day." Location="room3.asc" Function="hClock_Look" LineNum="177" Type="ROOM" SpeechFunction="Say" BlockNumber="12" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I can see my neighbor's fence out my window." Location="room3.asc" Function="hWindow_Look" LineNum="182" Type="ROOM" SpeechFunction="Say" BlockNumber="13" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I rather keep my window closed." Location="room3.asc" Function="hWindow_Interact" LineNum="187" Type="ROOM" SpeechFunction="Say" BlockNumber="14" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I keep stuff rather than books on my bookcase." Location="room3.asc" Function="hBookcase_Look" LineNum="192" Type="ROOM" SpeechFunction="Say" BlockNumber="15" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have my craft supplies in here. I'll grab them just in case." Location="room3.asc" Function="hBookcase_Interact" LineNum="201" Type="ROOM" SpeechFunction="Say" BlockNumber="16.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="There isn't anything else I need here." Location="room3.asc" Function="hBookcase_Interact" LineNum="206" Type="ROOM" SpeechFunction="Say" BlockNumber="16.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="My try at a graven image." Location="room3.asc" Function="oFrame_Look" LineNum="212" Type="ROOM" SpeechFunction="Say" BlockNumber="17" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I can't draw with my finger." Location="room3.asc" Function="oFrame_Interact" LineNum="220" Type="ROOM" SpeechFunction="Say" BlockNumber="18.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's sturdy." Location="room3.asc" Function="oFrame_Interact" LineNum="222" Type="ROOM" SpeechFunction="Say" BlockNumber="18.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Well... here goes nothing." Location="room3.asc" Function="oFrame_UseInv" LineNum="232" Type="ROOM" SpeechFunction="Say" BlockNumber="19.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Wait, my frame is still empty. I need something to draw on." Location="room3.asc" Function="hTable_UseInv" LineNum="257" Type="ROOM" SpeechFunction="Say" BlockNumber="20.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's weird even for me." Location="room3.asc" Function="hTable_UseInv" LineNum="259" Type="ROOM" SpeechFunction="Say" BlockNumber="20.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Skip took his wedding ring off last night." Location="room3.asc" Function="oRing_Look" LineNum="267" Type="ROOM" SpeechFunction="Say" BlockNumber="21" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hmm.. might as well take care of the 8th Commandment." Location="room3.asc" Function="oRing_Interact" LineNum="274" Type="ROOM" SpeechFunction="Say" BlockNumber="22.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I can't stand out here forever." Location="room4.asc" Function="hDoor_Look" LineNum="15" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I intern part-time at KAGS. I run errands mostly." Location="room4.asc" Function="hRadioStation_Look" LineNum="20" Type="ROOM" SpeechFunction="Say" BlockNumber="3" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Mmm... adobe walls." Location="room4.asc" Function="hRadioStation_Interact" LineNum="25" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I think that is the receptionist's car." Location="room4.asc" Function="hCar_Look" LineNum="30" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="If I set off the car alarm, the receptionist will get me fired." Location="room4.asc" Function="hCar_Interact" LineNum="35" Type="ROOM" SpeechFunction="Say" BlockNumber="6" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the number for a Police tip line. They are looking for the murderer." Location="room4.asc" Function="oFlyer_Look" LineNum="58" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Uh oh." Location="room4.asc" Function="oFlyer_Look" LineNum="59" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Perhaps I could lead the Police in the wrong direction." Location="room4.asc" Function="oFlyer_Interact" LineNum="65" Type="ROOM" SpeechFunction="Say" BlockNumber="10" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Police Tip line. Do you have a tip?" Location="room4.asc" Function="oFlyer_UseInv" LineNum="77" Type="ROOM" SpeechFunction="SayAt" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I do. I know who commited the murder." Location="room4.asc" Function="oFlyer_UseInv" LineNum="78" Type="ROOM" SpeechFunction="Say" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Really? Okay, do you have a name?" Location="room4.asc" Function="oFlyer_UseInv" LineNum="80" Type="ROOM" SpeechFunction="SayAt" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Skip Gote" Location="room4.asc" Function="oFlyer_UseInv" LineNum="81" Type="ROOM" SpeechFunction="Say" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Okay. We'll send officers to investigate." Location="room4.asc" Function="oFlyer_UseInv" LineNum="82" Type="ROOM" SpeechFunction="SayAt" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;Hung up&gt;" Location="room4.asc" Function="oFlyer_UseInv" LineNum="83" Type="ROOM" SpeechFunction="Display" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I need to make sure the police find evidence of Skip being there." Location="room4.asc" Function="oFlyer_UseInv" LineNum="85" Type="ROOM" SpeechFunction="Say" BlockNumber="11.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I already called them." Location="room4.asc" Function="oFlyer_UseInv" LineNum="89" Type="ROOM" SpeechFunction="Say" BlockNumber="11.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have no reason to do that." Location="room4.asc" Function="oFlyer_UseInv" LineNum="91" Type="ROOM" SpeechFunction="Say" BlockNumber="11.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="False alarm." Location="room5.asc" Function="susanReturns" LineNum="8" Type="ROOM" SpeechFunction="Say" BlockNumber="0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Awwwwwk... Ugh..." Location="room5.asc" Function="susanReturns" LineNum="24" Type="ROOM" SpeechFunction="Say" BlockNumber="0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Cornnuts." Location="room5.asc" Function="susanReturns" LineNum="25" Type="ROOM" SpeechFunction="Say" BlockNumber="0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="MY CAR!" Location="room5.asc" Function="room_AfterFadeIn" LineNum="52" Type="ROOM" SpeechFunction="Say" BlockNumber="2.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll be right back." Location="room5.asc" Function="room_AfterFadeIn" LineNum="53" Type="ROOM" SpeechFunction="Say" BlockNumber="2.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Posters are for reading, not touching." Location="room5.asc" Function="hPoster_Interact" LineNum="91" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the station sponsor.. Mercury Motors." Location="room5.asc" Function="hPoster_Look" LineNum="105" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="They sell used cars." Location="room5.asc" Function="hPoster_Look" LineNum="106" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll program their location in my GPS." Location="room5.asc" Function="hPoster_Look" LineNum="109" Type="ROOM" SpeechFunction="Say" BlockNumber="5.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The door into the DJ broadcasting booth." Location="room5.asc" Function="hBooth_Look" LineNum="116" Type="ROOM" SpeechFunction="Say" BlockNumber="6" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="They never let me in there. Jerks." Location="room5.asc" Function="hBooth_Look" LineNum="117" Type="ROOM" SpeechFunction="Say" BlockNumber="6" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hey Debra! You can't go in there." Location="room5.asc" Function="hBooth_Interact" LineNum="124" Type="ROOM" SpeechFunction="Say" BlockNumber="7.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need to go in there." Location="room5.asc" Function="hBooth_Interact" LineNum="130" Type="ROOM" SpeechFunction="Say" BlockNumber="7.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Free water." Location="room5.asc" Function="hWater_Look" LineNum="136" Type="ROOM" SpeechFunction="Say" BlockNumber="8" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need any water." Location="room5.asc" Function="hWater_Interact" LineNum="141" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I better not leave while Susan is out there. She may suspect something." Location="room5.asc" Function="hExit_Interact" LineNum="147" Type="ROOM" SpeechFunction="Say" BlockNumber="10.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Plaque reads, '2016 Winner! Best local station'" Location="room5.asc" Function="hPlaque_Look" LineNum="155" Type="ROOM" SpeechFunction="Say" BlockNumber="11" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Susan has a stack of printer paper." Location="room5.asc" Function="oPaper_Look" LineNum="161" Type="ROOM" SpeechFunction="Say" BlockNumber="12" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't think Susan would like me just taking her paper." Location="room5.asc" Function="oPaper_Interact" LineNum="166" Type="ROOM" SpeechFunction="Say" BlockNumber="13" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The paper cup Susan was drinking from." Location="room5.asc" Function="oCup_Look" LineNum="171" Type="ROOM" SpeechFunction="Say" BlockNumber="14" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="She won't see me pour something in, if I'm quick." Location="room5.asc" Function="oCup_Interact" LineNum="177" Type="ROOM" SpeechFunction="Say" BlockNumber="15.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need it." Location="room5.asc" Function="oCup_Interact" LineNum="180" Type="ROOM" SpeechFunction="Say" BlockNumber="15.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll pour some Draino in." Location="room5.asc" Function="oCup_UseInv" LineNum="188" Type="ROOM" SpeechFunction="Say" BlockNumber="16.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll place Skip's wedding ring on top." Location="room5.asc" Function="oPaper_UseInv" LineNum="199" Type="ROOM" SpeechFunction="Say" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the way back to the lobby." Location="room6.asc" Function="hExit_Look" LineNum="17" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The sign that let's you know if you're broadcasting." Location="room6.asc" Function="hOnAir_Look" LineNum="33" Type="ROOM" SpeechFunction="Say" BlockNumber="3" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I rather not mess with the sign." Location="room6.asc" Function="hOnAir_Interact" LineNum="38" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The mic sends your voice out to the airwaves." Location="room6.asc" Function="hMicrophone_Look" LineNum="43" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="'Test 1-2-3.' I don't seem to be broadcasting." Location="room6.asc" Function="hMicrophone_Interact" LineNum="52" Type="ROOM" SpeechFunction="Say" BlockNumber="6.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need to use the mic now." Location="room6.asc" Function="hMicrophone_Interact" LineNum="59" Type="ROOM" SpeechFunction="Say" BlockNumber="6.1.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The laptop is off." Location="room6.asc" Function="hLaptop_Look" LineNum="67" Type="ROOM" SpeechFunction="Say" BlockNumber="7.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The laptop is on, and broadcasting on 102.5 FM." Location="room6.asc" Function="hLaptop_Look" LineNum="70" Type="ROOM" SpeechFunction="Say" BlockNumber="7.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I have no reason to mess with the laptop right now." Location="room6.asc" Function="hLaptop_Interact" LineNum="78" Type="ROOM" SpeechFunction="Say" BlockNumber="8.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I've turned on the laptop. The mic is broadcasting on KAGS now!" Location="room6.asc" Function="hLaptop_Interact" LineNum="85" Type="ROOM" SpeechFunction="Say" BlockNumber="8.1.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The laptop is already on." Location="room6.asc" Function="hLaptop_Interact" LineNum="89" Type="ROOM" SpeechFunction="Say" BlockNumber="8.1.0.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Used car lot. I've heard not to trust them." Location="room7.asc" Function="hMotors_Look" LineNum="14" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Impressive statue of the Roman god Mercury." Location="room7.asc" Function="hMercury_Look" LineNum="19" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="2">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="ITS IS I, MERCURY, GOD OF COMMERCE,TRICKERY, bla bla whatever!" Location="room7.asc" Function="hMercury_Interact" LineNum="31" Type="ROOM" SpeechFunction="Say" BlockNumber="3.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="2">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Wait, just one of you?" Location="room7.asc" Function="hMercury_Interact" LineNum="32" Type="ROOM" SpeechFunction="Say" BlockNumber="3.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="2">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's been a long time since I've had a worshipper." Location="room7.asc" Function="hMercury_Interact" LineNum="33" Type="ROOM" SpeechFunction="Say" BlockNumber="3.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="2">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Here. Take this." Location="room7.asc" Function="hMercury_Interact" LineNum="34" Type="ROOM" SpeechFunction="Say" BlockNumber="3.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="2">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Have a nice day!" Location="room7.asc" Function="hMercury_Interact" LineNum="45" Type="ROOM" SpeechFunction="Say" BlockNumber="3.0.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Nothing happens." Location="room7.asc" Function="hMercury_Interact" LineNum="53" Type="ROOM" SpeechFunction="Display" BlockNumber="3.0.1.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I've talked to Mercury enough today." Location="room7.asc" Function="hMercury_Interact" LineNum="58" Type="ROOM" SpeechFunction="Say" BlockNumber="3.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="A ten dollar bill! Mercury's just handing out cash." Location="room7.asc" Function="oMoney_Look" LineNum="66" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Ten dollars! Not bad, Mercury. I'll hang onto this." Location="room7.asc" Function="oMoney_Interact" LineNum="72" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's a sewer grate." Location="room8.asc" Function="hGrate_Look" LineNum="21" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Ah man, I thought for sure I'd find something in here." Location="room8.asc" Function="hGrate_Interact" LineNum="26" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Downtown Cinema 3! Home of the best movies, and the stalest popcorn." Location="room8.asc" Function="hCinema_Look" LineNum="32" Type="ROOM" SpeechFunction="Say" BlockNumber="3" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Touching the cinema doesn't seem to do anything." Location="room8.asc" Function="hCinema_Interact" LineNum="38" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Upcoming movie showings..." Location="room8.asc" Function="hMovieSign_Look" LineNum="45" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Blackwell at 8 and 11:30." Location="room8.asc" Function="hMovieSign_Look" LineNum="46" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Reality on the Norm at 2, 7:45, and 10." Location="room8.asc" Function="hMovieSign_Look" LineNum="47" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="and The Fourth Wall at 4 and 9:45." Location="room8.asc" Function="hMovieSign_Look" LineNum="48" Type="ROOM" SpeechFunction="Say" BlockNumber="5" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I can't reach the sign." Location="room8.asc" Function="hMovieSign_Interact" LineNum="54" Type="ROOM" SpeechFunction="Say" BlockNumber="6" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's a simple lampost." Location="room8.asc" Function="hLamp_Look" LineNum="61" Type="ROOM" SpeechFunction="Say" BlockNumber="7" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Feels like a simple lampost." Location="room8.asc" Function="hLamp_Interact" LineNum="67" Type="ROOM" SpeechFunction="Say" BlockNumber="8" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the downtown bar." Location="room8.asc" Function="hBardoor_Look" LineNum="73" Type="ROOM" SpeechFunction="Say" BlockNumber="9" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The bar is closed right now." Location="room8.asc" Function="hBardoor_Interact" LineNum="81" Type="ROOM" SpeechFunction="Say" BlockNumber="10.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The sign says, 'Special showing tonight: Sunday Mantinee - Troll 3'" Location="room8.asc" Function="oSign_Look" LineNum="91" Type="ROOM" SpeechFunction="Say" BlockNumber="11" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Movie sign!" Location="room8.asc" Function="oSign_Interact" LineNum="98" Type="ROOM" SpeechFunction="Say" BlockNumber="12" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's the number for a Police tip line. They are looking for the murderer." Location="room8.asc" Function="oFlyer_Look" LineNum="115" Type="ROOM" SpeechFunction="Say" BlockNumber="15" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Uh oh." Location="room8.asc" Function="oFlyer_Look" LineNum="116" Type="ROOM" SpeechFunction="Say" BlockNumber="15" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Perhaps I could lead the Police in the wrong direction." Location="room8.asc" Function="oFlyer_Interact" LineNum="121" Type="ROOM" SpeechFunction="Say" BlockNumber="16" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Police Tip line. Do you have a tip?" Location="room8.asc" Function="oFlyer_UseInv" LineNum="133" Type="ROOM" SpeechFunction="SayAt" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I do. I know who commited the murder." Location="room8.asc" Function="oFlyer_UseInv" LineNum="134" Type="ROOM" SpeechFunction="Say" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Really? Okay, do you have a name?" Location="room8.asc" Function="oFlyer_UseInv" LineNum="136" Type="ROOM" SpeechFunction="SayAt" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Skip Gote" Location="room8.asc" Function="oFlyer_UseInv" LineNum="137" Type="ROOM" SpeechFunction="Say" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Okay. We'll send officers to investigate." Location="room8.asc" Function="oFlyer_UseInv" LineNum="138" Type="ROOM" SpeechFunction="SayAt" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;Hung up&gt;" Location="room8.asc" Function="oFlyer_UseInv" LineNum="139" Type="ROOM" SpeechFunction="Display" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I need to make sure the police find evidence of Skip being there." Location="room8.asc" Function="oFlyer_UseInv" LineNum="141" Type="ROOM" SpeechFunction="Say" BlockNumber="17.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I already called them." Location="room8.asc" Function="oFlyer_UseInv" LineNum="144" Type="ROOM" SpeechFunction="Say" BlockNumber="17.1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Just a typical neon bar sign." Location="room10.asc" Function="hSign_Look" LineNum="7" Type="ROOM" SpeechFunction="Say" BlockNumber="0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need to go back there." Location="room10.asc" Function="hBackdoor_Look" LineNum="12" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I don't need to go back there." Location="room10.asc" Function="hBackdoor_Interact" LineNum="17" Type="ROOM" SpeechFunction="Say" BlockNumber="2" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This guy looks like he's had a few." Location="room10.asc" Function="oBarguy_Look" LineNum="22" Type="ROOM" SpeechFunction="Say" BlockNumber="3" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="His ring finger is bare." Location="room10.asc" Function="oBarguy_Look" LineNum="24" Type="ROOM" SpeechFunction="Say" BlockNumber="3.0" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi!" Location="room10.asc" Function="oBarguy_Interact" LineNum="31" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="He's ignoring me." Location="room10.asc" Function="oBarguy_Interact" LineNum="33" Type="ROOM" SpeechFunction="Say" BlockNumber="4" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="...hmm..." Location="room301.asc" Function="room_AfterFadeIn" LineNum="29" Type="ROOM" SpeechFunction="Say" BlockNumber="1" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What do you say to a god?" Location="Dialog 0" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'm not worthy! I'm not worthy!" Location="Dialog 0" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh Mercury, you're so fine, you're so fine you blow my mind!" Location="Dialog 0" Function="Option 2" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You're the god for me Mercury!" Location="Dialog 0" Function="Option 3" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Never mind." Location="Dialog 0" Function="Option 4" LineNum="11" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi Susan!" Location="Dialog 1" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You don't work today. Why are you here?" Location="Dialog 1" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's water." Location="Dialog 1" Function="Option 2" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Thanks! I got it at Mercury Motors." Location="Dialog 1" Function="Option 3" LineNum="12" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="See you later." Location="Dialog 1" Function="Option 4" LineNum="15" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="How is work going?" Location="Dialog 1" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What are you drinking?" Location="Dialog 1" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Nice car out front." Location="Dialog 1" Function="Option 3" LineNum="11" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Good bye." Location="Dialog 1" Function="Option 4" LineNum="14" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi Susan!" Location="Dialog 2" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Mm." Location="Dialog 2" Function="Start" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Isn't today your day off?" Location="Dialog 2" Function="Option 1" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sure, I have plenty." Location="Dialog 2" Function="Option 2" LineNum="10" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You get a piece of paper." Location="Dialog 2" Function="Option 2" LineNum="12" Type="DIALOG" SpeechFunction="Display" BlockNumber="14" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Thanks! I got it at Mercury Motors." Location="Dialog 2" Function="Option 3" LineNum="16" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="3">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sure." Location="Dialog 2" Function="Option 4" LineNum="19" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="How is work going?" Location="Dialog 2" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Can I have a piece of paper?" Location="Dialog 2" Function="Option 2" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Nice car out front." Location="Dialog 2" Function="Option 3" LineNum="15" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Good bye." Location="Dialog 2" Function="Option 4" LineNum="18" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi!" Location="Dialog 3" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;blows smoke in your face&gt;" Location="Dialog 3" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Please don't." Location="Dialog 3" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Probably not. But go on." Location="Dialog 3" Function="Option 3" LineNum="11" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I need you to wait until I go inside." Location="Dialog 3" Function="Option 3" LineNum="12" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Uh huh." Location="Dialog 3" Function="Option 3" LineNum="13" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Then kick that car over there." Location="Dialog 3" Function="Option 3" LineNum="14" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="ARE YOU CRAZY?!" Location="Dialog 3" Function="Option 3" LineNum="15" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Not so loud!" Location="Dialog 3" Function="Option 3" LineNum="16" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I just need to do a thing." Location="Dialog 3" Function="Option 3" LineNum="17" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I see, well then I just need motivation." Location="Dialog 3" Function="Option 3" LineNum="18" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Motivation?" Location="Dialog 3" Function="Option 3" LineNum="19" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Cash." Location="Dialog 3" Function="Option 3" LineNum="20" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh." Location="Dialog 3" Function="Option 3" LineNum="21" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Probably not." Location="Dialog 3" Function="Option 4" LineNum="26" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What's your name?" Location="Dialog 3" Function="Option 1" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="How about that bitcoin, amirite?" Location="Dialog 3" Function="Option 2" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Would you do me a favor?" Location="Dialog 3" Function="Option 3" LineNum="10" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="See ya." Location="Dialog 3" Function="Option 4" LineNum="25" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What?" Location="Dialog 4" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;sigh&gt; Fine." Location="Dialog 4" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="5">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Probably not." Location="Dialog 4" Function="Option 2" LineNum="10" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Could you kick the car again?" Location="Dialog 4" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="See ya!" Location="Dialog 4" Function="Option 2" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="With a very important announcement!" Location="Dialog 5" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="With a very important announcement!" Location="Dialog 5" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This is Debra on KAGS 102.5!" Location="Dialog 5" Function="Option 1" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This is D-&quot;Dawg&quot; coming at ya!" Location="Dialog 5" Function="Option 2" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="This is just a test. Beeep." Location="Dialog 5" Function="Option 3" LineNum="10" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="God damnit!" Location="Dialog 6" Function="Option 1" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="OH MY GOD!" Location="Dialog 6" Function="Option 2" LineNum="11" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="GAWD!" Location="Dialog 6" Function="Option 3" LineNum="18" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'm not wearing any pants!" Location="Dialog 6" Function="Option 4" LineNum="25" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Welcome to Cinema 3. How can I help you?" Location="Dialog 7" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Which movie would you like to see?" Location="Dialog 7" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Come again real soon." Location="Dialog 7" Function="Option 2" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'd like to see a movie." Location="Dialog 7" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Never mind." Location="Dialog 7" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh, okay then. Come back and see us sometime." Location="Dialog 8" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I actually have no idea." Location="Dialog 8" Function="Option 1" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Welcome to Cinema 3. How can I help you?" Location="Dialog 9" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Which movie would you like to see?" Location="Dialog 9" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Come again real soon." Location="Dialog 9" Function="Option 2" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'd like to see a movie." Location="Dialog 9" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Never mind." Location="Dialog 9" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The special Sunday matinee showing of Troll 3." Location="Dialog 10" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Great! I've heard it's exceptionally bad." Location="Dialog 10" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Here's your ticket. Have fun!" Location="Dialog 10" Function="Option 1" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="**** 90 MINUTES LATER ****" Location="Dialog 10" Function="Option 1" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Come again real soon." Location="Dialog 10" Function="Option 2" LineNum="18" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="4">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Come again real soon." Location="Dialog 10" Function="Option 3" LineNum="21" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sunday matinee" Location="Dialog 10" Function="Option 1" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I actually have no idea." Location="Dialog 10" Function="Option 2" LineNum="17" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Never mind." Location="Dialog 10" Function="Option 3" LineNum="20" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Um...I just wanted to tell you guys something." Location="Dialog 11" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What?" Location="Dialog 11" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="7">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Are you feeling okay?" Location="Dialog 11" Function="Option 1" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="It's true. I'm not related to you at all." Location="Dialog 11" Function="Option 1" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="That's just ridiculous." Location="Dialog 11" Function="Option 1" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="So there. Now you know." Location="Dialog 11" Function="Option 1" LineNum="10" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;Hang up&gt;" Location="Dialog 11" Function="Option 1" LineNum="11" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="7">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Who?" Location="Dialog 11" Function="Option 2" LineNum="16" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="The Weasleys, Dad! They know magic and everything." Location="Dialog 11" Function="Option 2" LineNum="17" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I think she's referring to Harry Potter." Location="Dialog 11" Function="Option 2" LineNum="18" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="7">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Well, that's just crazy." Location="Dialog 11" Function="Option 2" LineNum="19" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sorry you're just not as cool." Location="Dialog 11" Function="Option 2" LineNum="20" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;Hang up&gt;" Location="Dialog 11" Function="Option 2" LineNum="21" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Twice." Location="Dialog 11" Function="Option 3" LineNum="26" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="7">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Uh huh." Location="Dialog 11" Function="Option 3" LineNum="27" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="With no thought of your back Mom." Location="Dialog 11" Function="Option 3" LineNum="28" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Well, I feel fine." Location="Dialog 11" Function="Option 3" LineNum="29" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Do you though?" Location="Dialog 11" Function="Option 3" LineNum="30" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="6">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Yeah. Are you feeling okay honey?" Location="Dialog 11" Function="Option 3" LineNum="31" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'll probably do it again too." Location="Dialog 11" Function="Option 3" LineNum="32" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="999">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="&lt;Hang up&gt;" Location="Dialog 11" Function="Option 3" LineNum="33" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I'm adopted." Location="Dialog 11" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Why can't you be like the Weasleys." Location="Dialog 11" Function="Option 2" LineNum="15" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I stepped on a crack." Location="Dialog 11" Function="Option 3" LineNum="25" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi!" Location="Dialog 12" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="9">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Go away." Location="Dialog 12" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="How are you?" Location="Dialog 12" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Goodbye." Location="Dialog 12" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi!" Location="Dialog 13" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi!" Location="Dialog 13" Function="Start" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Have a seat!" Location="Dialog 13" Function="Start" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="No thanks, I'm in a hurry." Location="Dialog 13" Function="Start" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Uh, maybe?" Location="Dialog 13" Function="Option 1" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You're beautiful!" Location="Dialog 13" Function="Option 2" LineNum="12" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hey, thanks, you too!" Location="Dialog 13" Function="Option 3" LineNum="15" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sure!" Location="Dialog 13" Function="Option 4" LineNum="18" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Are you looking for fun?" Location="Dialog 13" Function="Option 1" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Do you like what you see?" Location="Dialog 13" Function="Option 2" LineNum="11" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You're cute!" Location="Dialog 13" Function="Option 3" LineNum="14" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Goodbye." Location="Dialog 13" Function="Option 4" LineNum="17" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You're funny!" Location="Dialog 14" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh, I don't know." Location="Dialog 14" Function="Option 2" LineNum="9" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Oh boy!" Location="Dialog 14" Function="Option 3" LineNum="13" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="10">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Sure!" Location="Dialog 14" Function="Option 4" LineNum="17" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="You have the cutest moustache." Location="Dialog 14" Function="Option 1" LineNum="4" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Wanna watch some Netflix and chill?" Location="Dialog 14" Function="Option 2" LineNum="8" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Let's get outta here!" Location="Dialog 14" Function="Option 3" LineNum="12" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Ta-ta!" Location="Dialog 14" Function="Option 4" LineNum="16" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Hi Bob." Location="Dialog 15" Function="Start" LineNum="3" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="11">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Are you okay?" Location="Dialog 15" Function="Option 1" LineNum="6" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Never better!" Location="Dialog 15" Function="Option 1" LineNum="7" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="11">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="What?" Location="Dialog 15" Function="Option 2" LineNum="13" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="0">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="See ya!" Location="Dialog 15" Function="Option 2" LineNum="14" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="11">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Okay, see you tommorrow!" Location="Dialog 15" Function="Option 2" LineNum="15" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="I covet your ass." Location="Dialog 15" Function="Option 1" LineNum="5" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
+            </ScriptLines>
+          </Speech>
+          <Speech CharacterID="1000">
+            <ScriptLines>
+              <ScriptLine Text="" OriginalText="Can I have your stuff? I reeeeeally covet it." Location="Dialog 15" Function="Option 2" LineNum="12" Type="DIALOG" SpeechFunction="N/A" BlockNumber="" />
             </ScriptLines>
           </Speech>
         </SpeechLines>
@@ -9114,12 +11450,7 @@ stop]]></Script>
   <Component Name="Translations" />
   <Component Name="MusicAndSpeech">
     <SpeechVoxFiles>
-      <File Name="speech\debr1.ogg" FileTime="2017-08-13 02:47:12Z" />
-      <File Name="speech\debr2.ogg" FileTime="2017-08-13 02:47:41Z" />
-      <File Name="speech\debr3.ogg" FileTime="2017-08-13 02:48:09Z" />
-      <File Name="speech\debr4.ogg" FileTime="2017-08-13 03:34:37Z" />
-      <File Name="speech\debr6.ogg" FileTime="2017-08-13 03:35:08Z" />
-      <File Name="speech\debr7.ogg" FileTime="2017-08-13 03:36:20Z" />
+      <File Name="speech\debr1.ogg" FileTime="2017-08-31 03:13:49Z" />
       <File Name="speech\timo1.ogg" FileTime="2017-08-13 03:36:46Z" />
       <File Name="speech\timo3.ogg" FileTime="2017-08-13 03:37:07Z" />
       <File Name="speech\timo4.ogg" FileTime="2017-08-13 03:37:33Z" />
