@@ -8780,8 +8780,8 @@ return
                 <SubFolders />
                 <AudioClips>
                   <AudioClip>
-                    <SourceFileName>Music/00_intro/god-be-with-you-till-we-meet-again.ogg</SourceFileName>
                     <ScriptName>aGodbewithyou</ScriptName>
+                    <SourceFileName>Music/00_intro/god-be-with-you-till-we-meet-again.ogg</SourceFileName>
                     <Index>12</Index>
                     <Type>2</Type>
                     <BundlingType>InSeparateVOX</BundlingType>
