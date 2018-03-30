@@ -1,5 +1,6 @@
 # 10 Ways From Sunday
-AGS game (MAGS entry Aug. 2017). Theme is "The Bible"
+AGS game (MAGS winner Aug. 2017)   
+Theme is "The Bible"
 
 http://www.adventuregamestudio.co.uk/forums/index.php?topic=55084.0
 
